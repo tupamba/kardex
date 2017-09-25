@@ -1,0 +1,75 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Nuevo ingreso</h4>
+                        <p class="category">Datos del ingreso</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Fecha de ingreso</label>
+                                    <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" [selDate]="newEntry.dateEntry" placeholder="Ingrese la fecha"></my-date-picker>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Seleccione habitación</label>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                   <dropdown-generic [listDrop]='beds' (selectItem)="handleSelectBed($event)"></dropdown-generic>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="control-label">Paciente </label>
+                                <label *ngIf="newEntry.user" readonly><strong>{{newEntry.user.firstName}} {{newEntry.user.lastName}}</strong></label>                                <button class="btn btn-success" (click)="viewFind = !viewFind">Buscar paciente</button>
+                                <patient-find *ngIf="viewFind" (selectPatient)="handleSelectPatient($event)"></patient-find>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Diagnósitco medico</label><br/>
+                                    <textarea class="form-control" placeholder="Ingrese el diagnostico"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Diagnósitco nutricionista</label><br/>
+                                    <textarea class="form-control" placeholder="Ingrese el diagnostico"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Prescripción medico</label><br/>
+                                    <textarea class="form-control" placeholder="Ingrese el prescripción"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Prescripción nutricionista</label><br/>
+                                    <textarea class="form-control" placeholder="Ingrese el prescripción"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <button class="btn btn-success">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

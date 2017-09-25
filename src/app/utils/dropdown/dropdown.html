@@ -1,0 +1,10 @@
+<div class="form-group form-black label-floating">
+        <label class="control-label">Seleccione la cama</label>
+        <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Seleccione una cama
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li *ngFor="let item of list"><a (click)="select(item.value)">{{item.view}}</a></li>
+                </ul>
+              </div>
+    </div>

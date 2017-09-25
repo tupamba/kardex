@@ -1,0 +1,160 @@
+<div class="main-content">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">{{currentPatient.firstName}} {{currentPatient.lastName}}</h4>
+                    <p class="category">Datos del paciente</p>
+                </div>
+                <div class="card-content">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Documento</label>
+                                    <input type="text" class="form-control" value="3.113.074-9" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Fecha nacimiento</label>
+                                    <label class="form-control">{{currentPatient.birthDate |  date:'dd-MM-yyyy'}}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Estado</label>
+                                    <label class="form-control danger">Internado</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Diagnósitco médico</label>
+                                    <textarea class="form-control danger" readonly>Cuerpo extraño en esofago, Cuerpo extraño en esofago Cuerpo extraño en esofago Cuerpo extraño en esofago</textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Diagnósitco nutricional</label>
+                                    <textarea class="form-control danger" readonly>Cuerpo extraño en esofago, Cuerpo extraño en esofago Cuerpo extraño en esofago Cuerpo extraño en esofago</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Prescripción medica</label>
+                                    <textarea class="form-control danger" readonly>19/4 Nada v/o, 23/4 diben 500/24, 24/4 Fresubin 1000/24
+                                        30/4 blando</textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Prescripción nutricionista</label>
+                                    <textarea class="form-control danger" readonly>19/4 Nada v/o, 23/4 diben 500/24, 24/4 Fresubin 1000/24
+                                        30/4 Hiposodico de consistencia Blando</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Edad</label>
+                                    <input type="text" class="form-control" value="40" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Peso</label>
+                                    <label class="form-control">60 kg</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Talla</label>
+                                    <label class="form-control danger">1.89 mts</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">IMC</label>
+                                    <label class="form-control danger">1</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">Apetito</label>
+                                    <label class="form-control danger">SI</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group form-black label-floating">
+                                    <label class="control-label">T. Intestinal</label>
+                                    <label class="form-control danger">GFGSD</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <button type="submit" class="btn btn-success">Estudios</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <button type="submit" class="btn btn-success">Preferencias</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <button type="submit" class="btn btn-danger">Rechazos</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <button type="submit" class="btn btn-success">Ver Historia</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <button type="submit" class="btn btn-success">Ver Contoles</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <button type="submit" class="btn btn-success">Datos del ingreso</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="#pablo">
+                        <img class="img" src="../assets/img/faces/marc.jpg" />
+                    </a>
+                </div>
+
+                <div class="content">
+                    <h6 class="category text-gray">Diagnostico</h6>
+                    <h4 class="card-title">{{currentPatient.firstName}} {{currentPatient.lastName}}</h4>
+                    <p class="card-content">
+                        Detalles del ingreso sala cama etc.
+                    </p>
+                    <!-- <a href="#pablo" class="btn btn-danger btn-round">Follow</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

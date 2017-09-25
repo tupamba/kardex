@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Lista de pacientes</h4>
+                        <p class="category"></p>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-danger">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Sexo</th>
+                                    <th>Fecha nacimiento</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of listPatients">
+                                    <td>{{item.firstName}}</td>
+                                    <td>{{item.lastName}}</td>
+                                    <td *ngIf="item.sex == 'M'">Masculino</td>
+                                    <td *ngIf="item.sex == 'F'">Femenino</td>
+                                    <td>{{item.birthDate | date:'dd-MM-yyyy'}}</td>
+                                    <td class="text-danger"><a [routerLink]="['/patient-edit', item._id]">Ver</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+</div>
