@@ -117,7 +117,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__maps_maps_component__ = __webpack_require__("../../../../../src/app/maps/maps.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__notifications_notifications_component__ = __webpack_require__("../../../../../src/app/notifications/notifications.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__upgrade_upgrade_component__ = __webpack_require__("../../../../../src/app/upgrade/upgrade.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular_2_dropdown_multiselect__ = __webpack_require__("../../../../angular-2-dropdown-multiselect/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__utils_dropdown_dropdown__ = __webpack_require__("../../../../../src/app/utils/dropdown/dropdown.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__patient_find_patient_find_component__ = __webpack_require__("../../../../../src/app/patient/find/patient-find.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__patient_list_patient_list_component__ = __webpack_require__("../../../../../src/app/patient/list/patient-list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__patient_edit_patient_edit_component__ = __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.ts");
@@ -186,19 +186,19 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_19__patient_list_patient_list_component__["a" /* PatientListComponent */],
             __WEBPACK_IMPORTED_MODULE_20__patient_edit_patient_edit_component__["a" /* PatientEditComponent */],
             __WEBPACK_IMPORTED_MODULE_21__entry_add_entry_add_component__["a" /* EntryAddComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__patient_find_patient_find_component__["a" /* PatientFindComponent */]
+            __WEBPACK_IMPORTED_MODULE_18__patient_find_patient_find_component__["a" /* PatientFindComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__utils_dropdown_dropdown__["a" /* DropdownComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* ComponentsModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */],
             __WEBPACK_IMPORTED_MODULE_5__app_routing__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_22_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
             __WEBPACK_IMPORTED_MODULE_23_angularfire2_database__["b" /* AngularFireDatabaseModule */],
-            __WEBPACK_IMPORTED_MODULE_8_mydatepicker_src_my_date_picker_my_date_picker_module__["a" /* MyDatePickerModule */],
-            __WEBPACK_IMPORTED_MODULE_17_angular_2_dropdown_multiselect__["a" /* MultiselectDropdownModule */]
+            __WEBPACK_IMPORTED_MODULE_8_mydatepicker_src_my_date_picker_my_date_picker_module__["a" /* MyDatePickerModule */]
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_24__service_entry_service__["a" /* EntryService */], __WEBPACK_IMPORTED_MODULE_25__service_patient_service__["a" /* PatientService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
@@ -769,7 +769,7 @@ DashboardComponent = __decorate([
 /***/ "../../../../../src/app/entry/add/entry-add.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-10\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo ingreso</h4>\n                        <p class=\"category\">Datos del ingreso</p>\n                    </div>\n                    <div class=\"card-content\">\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Fecha de ingreso</label>\n                                    <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" [selDate]=\"newEntry.dateEntry\" placeholder=\"Ingrese la fecha\"></my-date-picker>\n                                </div>\n                            </div>\n                            <div class=\"col-md-4\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Seleccione la cama</label>\n                                    <ss-multiselect-dropdown placeholder=\"seleccionar\" [options]=\"myOptions\" [(ngModel)]=\"optionsModel\" (ngModelChange)=\"onChange($event)\"></ss-multiselect-dropdown>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <label class=\"control-label\">Paciente </label>\n                                <label *ngIf=\"newEntry.user\" readonly><strong>{{newEntry.user.firstName}} {{newEntry.user.lastName}}</strong></label>                                <button class=\"btn btn-success\" (click)=\"viewFind = !viewFind\">Buscar paciente</button>\n                                <patient-find *ngIf=\"viewFind\" (selectPatient)=\"handleSelectPatient($event)\"></patient-find>\n                            </div>\n                        </div>\n\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"clearfix\"></div>\n                        <button class=\"btn btn-success\">Agregar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-10\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo ingreso</h4>\n                        <p class=\"category\">Datos del ingreso</p>\n                    </div>\n                    <div class=\"card-content\">\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Fecha de ingreso</label>\n                                    <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" [selDate]=\"newEntry.dateEntry\" placeholder=\"Ingrese la fecha\"></my-date-picker>\n                                </div>\n                            </div>\n                            <div class=\"col-md-4\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Seleccione habitación</label>\n                                    \n                                </div>\n                            </div>\n                            <div class=\"col-md-4\">\n                                   <dropdown-generic [listDrop]='beds' (selectItem)=\"handleSelectBed($event)\"></dropdown-generic>\n                                </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <label class=\"control-label\">Paciente </label>\n                                <label *ngIf=\"newEntry.user\" readonly><strong>{{newEntry.user.firstName}} {{newEntry.user.lastName}}</strong></label>                                <button class=\"btn btn-success\" (click)=\"viewFind = !viewFind\">Buscar paciente</button>\n                                <patient-find *ngIf=\"viewFind\" (selectPatient)=\"handleSelectPatient($event)\"></patient-find>\n                            </div>\n                        </div>\n\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"clearfix\"></div>\n                        <button class=\"btn btn-success\">Agregar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -803,9 +803,10 @@ var EntryAddComponent = (function () {
         this.newEntry = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["b" /* Entry */](new Date(), null, null, null, null, null, null, null, null, null, "");
     }
     EntryAddComponent.prototype.ngOnInit = function () {
-        this.myOptions = [
-            { id: 1, name: 'Cama 1' },
-            { id: 2, name: 'Cama 2' },
+        this.beds = [
+            { id: 1, value: { number: 1, Room: { number: 1, floor: 1 } }, view: 'Cama 1' },
+            { id: 2, value: { number: 2, Room: { number: 1, floor: 1 } }, view: 'Cama 2' },
+            { id: 3, value: { number: 2, Room: { number: 1, floor: 1 } }, view: 'Cama 3' }
         ];
     };
     EntryAddComponent.prototype.onChange = function () {
@@ -817,6 +818,9 @@ var EntryAddComponent = (function () {
         console.log(event.lastName);
         this.newEntry.user = event;
         this.viewFind = false;
+    };
+    EntryAddComponent.prototype.handleSelectBed = function (event) {
+        console.log(event.number);
     };
     return EntryAddComponent;
 }());
@@ -1790,6 +1794,72 @@ UserProfileComponent = __decorate([
 ], UserProfileComponent);
 
 //# sourceMappingURL=user-profile.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/utils/dropdown/dropdown.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"form-group form-black label-floating\">\r\n        <label class=\"control-label\">Seleccione la cama</label>\r\n        <div class=\"dropdown\">\r\n                <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Seleccione una cama\r\n                <span class=\"caret\"></span></button>\r\n                <ul class=\"dropdown-menu\">\r\n                  <li *ngFor=\"let item of list\"><a (click)=\"select(item.value)\">{{item.view}}</a></li>\r\n                </ul>\r\n              </div>\r\n    </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/utils/dropdown/dropdown.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DropdownComponent; });
+/* unused harmony export Select_Item */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DropdownComponent = (function () {
+    function DropdownComponent() {
+        this.selectItem = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+    }
+    DropdownComponent.prototype.ngOnInit = function () {
+        console.log("DropdownComponent start");
+        console.log(this.list.length);
+    };
+    DropdownComponent.prototype.select = function (item) {
+        this.selectItem.emit(item);
+    };
+    return DropdownComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("listDrop"),
+    __metadata("design:type", Array)
+], DropdownComponent.prototype, "list", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])("selectItem"),
+    __metadata("design:type", Object)
+], DropdownComponent.prototype, "selectItem", void 0);
+DropdownComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'dropdown-generic',
+        template: __webpack_require__("../../../../../src/app/utils/dropdown/dropdown.html")
+    }),
+    __metadata("design:paramtypes", [])
+], DropdownComponent);
+
+var Select_Item = (function () {
+    function Select_Item(id, view, value) {
+        this.id = id;
+        this.view = view;
+        this.value = value;
+    }
+    return Select_Item;
+}());
+
+//# sourceMappingURL=dropdown.js.map
 
 /***/ }),
 
