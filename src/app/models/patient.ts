@@ -75,6 +75,7 @@ export class Patient {
     constructor(
         public firstName: string,
         public lastName: string,
+        public document:string,
         public birthDate: Date,
         public sex: string,
         public personalHistory: [any],

@@ -9,27 +9,33 @@
                     </div>
                     <div class="card-content">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group form-black label-floating">
                                     <label class="control-label">Fecha de ingreso</label>
                                     <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" [selDate]="newEntry.dateEntry" placeholder="Ingrese la fecha"></my-date-picker>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating">
-                                    <label class="control-label">Seleccione habitación</label>
-                                    
-                                </div>
+                            <div class="col-md-6">
+                                <dropdown-generic [listDrop]='beds' (selectItem)="handleSelectBed($event)"></dropdown-generic>
                             </div>
-                            <div class="col-md-4">
-                                   <dropdown-generic [listDrop]='beds' (selectItem)="handleSelectBed($event)"></dropdown-generic>
-                                </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <label class="control-label">Paciente </label>
-                                <label *ngIf="newEntry.user" readonly><strong>{{newEntry.user.firstName}} {{newEntry.user.lastName}}</strong></label>                                <button class="btn btn-success" (click)="viewFind = !viewFind">Buscar paciente</button>
-                                <patient-find *ngIf="viewFind" (selectPatient)="handleSelectPatient($event)"></patient-find>
+                                <div class="form-group form-black">
+                                    <label class="control-label">Paciente</label>
+                                    <div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control col-md-4" [(ngModel)]='documentUser' placeholder="Ingrese el documento ..."></div>
+                                        <div class="col-md-4">
+                                            <a href="" (click)="viewFind = !viewFind" class="dropdown-toggle" data-toggle="dropdown">
+                                                        <i class="material-icons">find_in_page</i>Buscar pacientes
+                                                </a>
+                                        </div>
+                                        <patient-find *ngIf="viewFind" (selectPatient)="handleSelectPatient($event)"></patient-find>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
 

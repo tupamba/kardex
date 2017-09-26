@@ -2,7 +2,8 @@ import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'dropdown-generic',
-    templateUrl: 'dropdown.html'
+    templateUrl: 'dropdown.html',
+    styleUrls: ['./dropdown.css']
 })
 
 export class DropdownComponent implements OnInit {
@@ -10,6 +11,8 @@ export class DropdownComponent implements OnInit {
     list:Select_Item[];
     @Output("selectItem")
     selectItem = new EventEmitter();
+
+    placeholderDrop = "Seleccione una opción";
     constructor() { }
 
     ngOnInit() { 
@@ -18,7 +21,8 @@ export class DropdownComponent implements OnInit {
     }
     select(item:any)
     {
-        this.selectItem.emit(item);
+        this.selectItem.emit(item.value);
+        this.placeholderDrop = item.view
     }
 }
 export class Select_Item {
