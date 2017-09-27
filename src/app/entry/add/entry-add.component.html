@@ -24,14 +24,18 @@
                                 <div class="form-group form-black">
                                     <label class="control-label">Paciente</label>
                                     <div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-6">
                                             <input type="text" class="form-control col-md-4" [(ngModel)]='documentUser' placeholder="Ingrese el documento ..."></div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <a href="" (click)="viewFind = !viewFind" class="dropdown-toggle" data-toggle="dropdown">
                                                         <i class="material-icons">find_in_page</i>Buscar pacientes
                                                 </a>
+                                            <a href="" (click)="viewAdd = !viewAdd" class="dropdown-toggle" data-toggle="dropdown">
+                                                        <i class="material-icons">note_add</i>Nuevo pacientes
+                                                </a>
                                         </div>
-                                        <patient-find *ngIf="viewFind" (selectPatient)="handleSelectPatient($event)"></patient-find>
+                                        <patient-find *ngIf="viewFind" (selectPatient)="handleSelectPatient($event)"></patient-find>                                        
+                                        <app-patient-add *ngIf="viewAdd"></app-patient-add>
                                     </div>
 
                                 </div>

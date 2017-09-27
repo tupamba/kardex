@@ -5,7 +5,7 @@ import { EntryService } from "../../service/entry.service";
 import { MyDatePickerModule } from 'mydatepicker/src/my-date-picker/my-date-picker.module';
 import { PatientFindComponent } from '../../patient/find/patient-find.component';
 import { DropdownComponent, Select_Item } from "../../utils/dropdown/dropdown";
-
+import { PatientAddComponent } from '../../patient/add/patient-add.component';
 
 @Component({
   selector: 'app-entry-add',

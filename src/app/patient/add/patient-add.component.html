@@ -1,0 +1,41 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Nuevo paciente</h4>
+                        <p class="category">Datos del paciente</p>
+                    </div>
+                    <form (ngSubmit)="onSubmit()" #patientForm="ngForm" novalidate>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Documento</label>
+                                        <input type="text" class="form-control" id="document" required [(ngModel)]="model.document" name="document">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Fecha nacimiento</label>
+                                        <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" 
+                                         placeholder="Ingrese la fecha" id="birthDate" required [(ngModel)]="model.birthDate" name="birthDate"></my-date-picker>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Nombre</label>
+                                        <input type="text" class="form-control" id="name" required  [(ngModel)]="model.name" name="name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <button type="submit" class="btn btn-success" [disabled]="!patientForm.form.valid">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

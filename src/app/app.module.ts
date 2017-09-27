@@ -24,6 +24,7 @@ import { DropdownComponent } from "./utils/dropdown/dropdown";
 import { PatientFindComponent } from './patient/find/patient-find.component';
 import { PatientListComponent } from './patient/list/patient-list.component';
 import { PatientEditComponent } from './patient/edit/patient-edit.component';
+import { PatientAddComponent } from './patient/add/patient-add.component';
 import { EntryAddComponent } from "./entry/add/entry-add.component";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
@@ -50,6 +51,7 @@ export const firebaseConfig = {
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    PatientAddComponent,
     PatientListComponent,
     PatientEditComponent,
     EntryAddComponent,
