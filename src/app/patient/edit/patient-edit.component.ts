@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Patient } from "../../models/patient";
 import { PatientService } from "../../service/patient.service";
@@ -10,14 +10,20 @@ import { PatientService } from "../../service/patient.service";
 export class PatientEditComponent implements OnInit {
   listPatients: Patient[];
   currentPatient: Patient;
+  @Input("patient")
+  patient: Patient;
   constructor(private _route: ActivatedRoute, private _service: PatientService) { }
 
   ngOnInit() {
-    this.listPatients = this._service.getCurrentPatients();
-    this._route.params.forEach((params: Params) => {
-      let id = params['id'];
-      this.currentPatient = this.listPatients.find(x => x._id == id);
-    });
+    if (this.patient) {
+      this.currentPatient = this.patient;
+    } else {
+      this.listPatients = this._service.getCurrentPatients();
+      this._route.params.forEach((params: Params) => {
+        let id = params['id'];
+        this.currentPatient = this.listPatients.find(x => x._id == id);
+      });
+    }
   }
 
 }

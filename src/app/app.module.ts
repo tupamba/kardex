@@ -30,6 +30,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { EntryService } from "./service/entry.service";
 import { PatientService } from "./service/patient.service";
+import { MediaService } from "./service/media.service";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA2oM84Cam1vhwkhPaNTT1AsoOolOk71Ow",
@@ -70,7 +71,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     MyDatePickerModule
   ],
-  providers: [EntryService,PatientService],
+  providers: [EntryService,PatientService,MediaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

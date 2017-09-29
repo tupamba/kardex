@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { Entry } from "../../models/patient";
+import { Entry, Patient } from "../../models/patient";
 import { EntryService } from "../../service/entry.service";
 import { MyDatePickerModule } from 'mydatepicker/src/my-date-picker/my-date-picker.module';
 import { PatientFindComponent } from '../../patient/find/patient-find.component';
@@ -16,7 +16,7 @@ export class EntryAddComponent implements OnInit {
   beds: Select_Item[];
   viewFind: boolean = false;
   newEntry: Entry = new Entry(new Date(), null, null, null, null, null, null, null, null, null, "");
-  documentUser:string;
+  patient:Patient = new Patient("","","",null,"",null,null,null,null,"");
   myDatePickerOptions: any;
   constructor(private _route: ActivatedRoute, private _service: EntryService) { }
 
@@ -36,7 +36,7 @@ export class EntryAddComponent implements OnInit {
   handleSelectPatient(event) {
     console.log(event.lastName);
     this.newEntry.user = event;
-    this.documentUser = this.newEntry.user.firstName + " " + this.newEntry.user.lastName + " " + this.newEntry.user.document
+    this.patient = this.newEntry.user;
     this.viewFind = false;
   }
   handleSelectBed(event)

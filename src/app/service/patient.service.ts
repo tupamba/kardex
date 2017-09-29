@@ -30,6 +30,28 @@ export class PatientService {
                     return res;
                 });
     }
+    getPatientsforName(name:string) {
+        console.log("getPatients start");
+        if (AppSettings.MOCK)
+            return Observable.of(patients).map(moqRooms => JSON.stringify(moqRooms.filter(x => x.firstName.toLowerCase().includes(name.toLowerCase()))));
+        else
+            return this.db.list('/patient').map
+                (res => {
+                    console.log(res.length);
+                    return res;
+                });
+    }
+    getPatientsforDocument(document:string) {
+        console.log("getPatients start");
+        if (AppSettings.MOCK)
+            return Observable.of(patients).map(moqRooms => JSON.stringify(moqRooms.filter(x => x.document.toLowerCase().includes(document.toLowerCase()))));
+        else
+            return this.db.list('/patient').map
+                (res => {
+                    console.log(res.length);
+                    return res;
+                });
+    }
     getCurrentPatients()
     {
         return patients;

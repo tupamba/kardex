@@ -127,12 +127,14 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__service_entry_service__ = __webpack_require__("../../../../../src/app/service/entry.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -197,13 +199,13 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* ComponentsModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */],
             __WEBPACK_IMPORTED_MODULE_5__app_routing__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_23_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
             __WEBPACK_IMPORTED_MODULE_24_angularfire2_database__["b" /* AngularFireDatabaseModule */],
             __WEBPACK_IMPORTED_MODULE_8_mydatepicker_src_my_date_picker_my_date_picker_module__["a" /* MyDatePickerModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_25__service_entry_service__["a" /* EntryService */], __WEBPACK_IMPORTED_MODULE_26__service_patient_service__["a" /* PatientService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_25__service_entry_service__["a" /* EntryService */], __WEBPACK_IMPORTED_MODULE_26__service_patient_service__["a" /* PatientService */], __WEBPACK_IMPORTED_MODULE_27__service_media_service__["a" /* MediaService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -274,7 +276,7 @@ AppRoutingModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* RouterModule */].forRoot(routes)
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */].forRoot(routes)
         ],
         exports: [],
     })
@@ -316,7 +318,7 @@ ComponentsModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */],
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_3__footer_footer_component__["a" /* FooterComponent */],
@@ -775,7 +777,7 @@ DashboardComponent = __decorate([
 /***/ "../../../../../src/app/entry/add/entry-add.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-10\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo ingreso</h4>\n                        <p class=\"category\">Datos del ingreso</p>\n                    </div>\n                    <div class=\"card-content\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Fecha de ingreso</label>\n                                    <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" [selDate]=\"newEntry.dateEntry\" placeholder=\"Ingrese la fecha\"></my-date-picker>\n                                </div>\n                            </div>\n                            <div class=\"col-md-6\">\n                                <dropdown-generic [listDrop]='beds' (selectItem)=\"handleSelectBed($event)\"></dropdown-generic>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black\">\n                                    <label class=\"control-label\">Paciente</label>\n                                    <div>\n                                        <div class=\"col-md-6\">\n                                            <input type=\"text\" class=\"form-control col-md-4\" [(ngModel)]='documentUser' placeholder=\"Ingrese el documento ...\"></div>\n                                        <div class=\"col-md-6\">\n                                            <a href=\"\" (click)=\"viewFind = !viewFind\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"material-icons\">find_in_page</i>Buscar pacientes\n                                                </a>\n                                            <a href=\"\" (click)=\"viewAdd = !viewAdd\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"material-icons\">note_add</i>Nuevo pacientes\n                                                </a>\n                                        </div>\n                                        <patient-find *ngIf=\"viewFind\" (selectPatient)=\"handleSelectPatient($event)\"></patient-find>                                        \n                                        <app-patient-add *ngIf=\"viewAdd\"></app-patient-add>\n                                    </div>\n\n                                </div>\n\n                            </div>\n                        </div>\n\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"clearfix\"></div>\n                        <button class=\"btn btn-success\">Agregar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-10\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo ingreso</h4>\n                        <p class=\"category\">Datos del ingreso</p>\n                    </div>\n                    <div class=\"card-content\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Fecha de ingreso</label>\n                                    <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" [selDate]=\"newEntry.dateEntry\" placeholder=\"Ingrese la fecha\"></my-date-picker>\n                                </div>\n                            </div>\n                            <div class=\"col-md-6\">\n                                <dropdown-generic [listDrop]='beds' (selectItem)=\"handleSelectBed($event)\"></dropdown-generic>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black\">\n                                    <label class=\"control-label\">Paciente</label>\n                                    <div>\n                                        <div class=\"col-md-5\">\n                                            <input type=\"text\" class=\"form-control col-md-4\" [(ngModel)]=\"patient.firstName\" placeholder=\"Ingrese el nombre ...\">\n                                        </div>\n                                        <div class=\"col-md-4\">\n                                                <input type=\"text\" class=\"form-control col-md-4\" [(ngModel)]='patient.document' placeholder=\"Ingrese el documento ...\">\n                                            </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" (click)=\"viewFind = !viewFind\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i class=\"fa fa-search\" aria-hidden=\"true\"></i>\n                                                </a>\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" (click)=\"viewAdd = !viewAdd\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>\n                                                </a>\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                                <a href=\"\" *ngIf=\"this.newEntry.user\" (click)=\"viewPerfil = !viewPerfil\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n                                                    </a>\n                                            </div>\n                                        <patient-find *ngIf=\"viewFind\" [document]=\"patient.document\" [name]=\"patient.firstName\" (selectPatient)=\"handleSelectPatient($event)\"></patient-find>\n                                        <app-patient-add *ngIf=\"viewAdd\"></app-patient-add>\n                                        <app-patient-edit *ngIf=\"viewPerfil\" [patient]=\"patient\"></app-patient-edit>\n                                    </div>\n\n                                </div>\n\n                            </div>\n                        </div>\n\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"clearfix\"></div>\n                        <button class=\"btn btn-success\">Agregar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -807,6 +809,7 @@ var EntryAddComponent = (function () {
         this._service = _service;
         this.viewFind = false;
         this.newEntry = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["b" /* Entry */](new Date(), null, null, null, null, null, null, null, null, null, "");
+        this.patient = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */]("", "", "", null, "", null, null, null, null, "");
     }
     EntryAddComponent.prototype.ngOnInit = function () {
         this.beds = [
@@ -823,7 +826,7 @@ var EntryAddComponent = (function () {
     EntryAddComponent.prototype.handleSelectPatient = function (event) {
         console.log(event.lastName);
         this.newEntry.user = event;
-        this.documentUser = this.newEntry.user.firstName + " " + this.newEntry.user.lastName + " " + this.newEntry.user.document;
+        this.patient = this.newEntry.user;
         this.viewFind = false;
     };
     EntryAddComponent.prototype.handleSelectBed = function (event) {
@@ -1010,7 +1013,7 @@ MapsComponent = __decorate([
 /* unused harmony export DiagnosticNutritionist */
 /* unused harmony export MedicalPrescription */
 /* unused harmony export NutritionistPrescription */
-/* unused harmony export Patient */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Patient; });
 /* unused harmony export Studio */
 /* unused harmony export IntestinalTest */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSettings; });
@@ -1225,7 +1228,7 @@ NotificationsComponent = __decorate([
 /***/ "../../../../../src/app/patient/add/patient-add.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo paciente</h4>\n                        <p class=\"category\">Datos del paciente</p>\n                    </div>\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\" novalidate>\n                        <div class=\"card-content\">\n                            <div class=\"row\">\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Documento</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Fecha nacimiento</label>\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" \n                                         placeholder=\"Ingrese la fecha\" id=\"birthDate\" required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Nombre</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"name\" required  [(ngModel)]=\"model.name\" name=\"name\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"clearfix\"></div>\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo paciente</h4>\n                        <p class=\"category\">Datos del paciente</p>\n                    </div>\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\" novalidate>\n                        <div class=\"card-content\">\n                            <div class=\"row\">\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Documento</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Fecha nacimiento</label>\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                            required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Nombre</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"name\" required [(ngModel)]=\"model.name\" name=\"name\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Subir archivo</label>\n                                        <form ngNoForm>\n                                            <input type=\"file\" (change)=\"fileChange($event)\" placeholder=\"Upload file\">\n                                            <i class=\"fa fa-upload\" aria-hidden=\"true\"></i>\n                                        </form>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"clearfix\"></div>\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1238,6 +1241,7 @@ module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1250,10 +1254,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PatientAddComponent = (function () {
-    function PatientAddComponent(_route, _service) {
+    function PatientAddComponent(_route, _service, _media) {
         this._route = _route;
         this._service = _service;
+        this._media = _media;
     }
     PatientAddComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1270,6 +1276,14 @@ var PatientAddComponent = (function () {
     PatientAddComponent.prototype.onDateChanged = function (event) {
         this.model.birthDate = event;
     };
+    PatientAddComponent.prototype.fileChange = function (event) {
+        var fileList = event.target.files;
+        if (fileList.length > 0) {
+            var file = fileList[0];
+            this._media.folder = "images";
+            this._media.upload(file);
+        }
+    };
     return PatientAddComponent;
 }());
 PatientAddComponent = __decorate([
@@ -1277,7 +1291,7 @@ PatientAddComponent = __decorate([
         selector: 'app-patient-add',
         template: __webpack_require__("../../../../../src/app/patient/add/patient-add.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_media_service__["a" /* MediaService */]) === "function" && _c || Object])
 ], PatientAddComponent);
 
 var modelView = (function () {
@@ -1289,7 +1303,7 @@ var modelView = (function () {
     return modelView;
 }());
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=patient-add.component.js.map
 
 /***/ }),
@@ -1308,7 +1322,8 @@ module.exports = "<div class=\"main-content\">\n<div class=\"container-fluid\">\
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientEditComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_patient__ = __webpack_require__("../../../../../src/app/models/patient.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1321,6 +1336,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PatientEditComponent = (function () {
     function PatientEditComponent(_route, _service) {
         this._route = _route;
@@ -1328,23 +1344,32 @@ var PatientEditComponent = (function () {
     }
     PatientEditComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.listPatients = this._service.getCurrentPatients();
-        this._route.params.forEach(function (params) {
-            var id = params['id'];
-            _this.currentPatient = _this.listPatients.find(function (x) { return x._id == id; });
-        });
+        if (this.patient) {
+            this.currentPatient = this.patient;
+        }
+        else {
+            this.listPatients = this._service.getCurrentPatients();
+            this._route.params.forEach(function (params) {
+                var id = params['id'];
+                _this.currentPatient = _this.listPatients.find(function (x) { return x._id == id; });
+            });
+        }
     };
     return PatientEditComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("patient"),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */]) === "function" && _a || Object)
+], PatientEditComponent.prototype, "patient", void 0);
 PatientEditComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-patient-edit',
         template: __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _c || Object])
 ], PatientEditComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=patient-edit.component.js.map
 
 /***/ }),
@@ -1382,16 +1407,32 @@ var PatientFindComponent = (function () {
         this._service = _service;
         this.selPatient = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
     }
-    ;
     PatientFindComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._service.getPatients().subscribe(function (result) {
-            console.log(result);
-            _this.listPatients = JSON.parse(result);
-        }, function (error) {
-            console.log("error " + error);
-            _this.listPatients = [];
-        });
+        if (this.name && this.name != "")
+            this._service.getPatientsforName(this.name).subscribe(function (result) {
+                console.log(result);
+                _this.listPatients = JSON.parse(result);
+            }, function (error) {
+                console.log("error " + error);
+                _this.listPatients = [];
+            });
+        else if (this.doc && this.doc != "")
+            this._service.getPatientsforDocument(this.doc).subscribe(function (result) {
+                console.log(result);
+                _this.listPatients = JSON.parse(result);
+            }, function (error) {
+                console.log("error " + error);
+                _this.listPatients = [];
+            });
+        else
+            this._service.getPatients().subscribe(function (result) {
+                console.log(result);
+                _this.listPatients = JSON.parse(result);
+            }, function (error) {
+                console.log("error " + error);
+                _this.listPatients = [];
+            });
     };
     PatientFindComponent.prototype.selectPatient = function (item) {
         this.selPatient.emit(item);
@@ -1402,6 +1443,14 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])("selectPatient"),
     __metadata("design:type", Object)
 ], PatientFindComponent.prototype, "selPatient", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("document"),
+    __metadata("design:type", String)
+], PatientFindComponent.prototype, "doc", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("name"),
+    __metadata("design:type", String)
+], PatientFindComponent.prototype, "name", void 0);
 PatientFindComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'patient-find',
@@ -1569,6 +1618,75 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/service/media.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MediaService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__("../../../../firebase/firebase-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MediaService = (function () {
+    function MediaService(db, router) {
+        this.db = db;
+        this.router = router;
+        console.log("EntryService Start");
+        var storageRef = __WEBPACK_IMPORTED_MODULE_4_firebase__["storage"]().ref();
+    }
+    MediaService.prototype.upload = function (selectedFile) {
+        var _this = this;
+        // Create a root reference
+        var storageRef = __WEBPACK_IMPORTED_MODULE_4_firebase__["storage"]().ref();
+        var success = false;
+        // This currently only grabs item 0, TODO refactor it to grab them all
+        // for (let selectedFile of selectedFiles) {
+        console.log(selectedFile);
+        // Make local copies of services because "this" will be clobbered
+        var router = this.router;
+        var af = this.db;
+        var folder = this.folder;
+        var path = "/" + this.folder + "/" + selectedFile.name;
+        var iRef = storageRef.child(path);
+        iRef.put(selectedFile).then(function (snapshot) {
+            console.log('Uploaded a blob or file! Now storing the reference at', "/" + _this.folder + "/images/");
+            af.list("/" + folder + "/images/").push({ path: path, filename: selectedFile.name });
+        });
+        // }
+    };
+    return MediaService;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    __metadata("design:type", String)
+], MediaService.prototype, "folder", void 0);
+MediaService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], MediaService);
+
+var _a, _b;
+//# sourceMappingURL=media.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/service/patient.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1612,6 +1730,26 @@ var PatientService = (function () {
         console.log("getPatients start");
         if (__WEBPACK_IMPORTED_MODULE_4__models_patient__["a" /* AppSettings */].MOCK)
             return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(patients).map(function (moqRooms) { return JSON.stringify(moqRooms); });
+        else
+            return this.db.list('/patient').map(function (res) {
+                console.log(res.length);
+                return res;
+            });
+    };
+    PatientService.prototype.getPatientsforName = function (name) {
+        console.log("getPatients start");
+        if (__WEBPACK_IMPORTED_MODULE_4__models_patient__["a" /* AppSettings */].MOCK)
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(patients).map(function (moqRooms) { return JSON.stringify(moqRooms.filter(function (x) { return x.firstName.toLowerCase().includes(name.toLowerCase()); })); });
+        else
+            return this.db.list('/patient').map(function (res) {
+                console.log(res.length);
+                return res;
+            });
+    };
+    PatientService.prototype.getPatientsforDocument = function (document) {
+        console.log("getPatients start");
+        if (__WEBPACK_IMPORTED_MODULE_4__models_patient__["a" /* AppSettings */].MOCK)
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(patients).map(function (moqRooms) { return JSON.stringify(moqRooms.filter(function (x) { return x.document.toLowerCase().includes(document.toLowerCase()); })); });
         else
             return this.db.list('/patient').map(function (res) {
                 console.log(res.length);

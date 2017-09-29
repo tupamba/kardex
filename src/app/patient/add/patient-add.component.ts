@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Patient } from "../../models/patient";
 import { PatientService } from "../../service/patient.service";
+import { MediaService } from "../../service/media.service";
 import { MyDatePickerModule } from 'mydatepicker/src/my-date-picker/my-date-picker.module';
 
 @Component({
@@ -14,7 +15,7 @@ export class PatientAddComponent implements OnInit {
   currentPatient: Patient;
   model:modelView;
   myDatePickerOptions: any;
-  constructor(private _route: ActivatedRoute, private _service: PatientService) { }
+  constructor(private _route: ActivatedRoute, private _service: PatientService,private _media: MediaService) { }
 
   ngOnInit() {
     this.model = new modelView("","","");
@@ -32,6 +33,15 @@ export class PatientAddComponent implements OnInit {
   {
     this.model.birthDate = event;
   }
+  fileChange(event) {
+    let fileList: FileList = event.target.files;
+   
+    if(fileList.length > 0) {
+        let file: File = fileList[0];
+        this._media.folder = "images";
+        this._media.upload(file);
+    }
+}
 
 }
 export class modelView {

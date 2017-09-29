@@ -24,18 +24,30 @@
                                 <div class="form-group form-black">
                                     <label class="control-label">Paciente</label>
                                     <div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control col-md-4" [(ngModel)]='documentUser' placeholder="Ingrese el documento ..."></div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control col-md-4" [(ngModel)]="patient.firstName" placeholder="Ingrese el nombre ...">
+                                        </div>
+                                        <div class="col-md-4">
+                                                <input type="text" class="form-control col-md-4" [(ngModel)]='patient.document' placeholder="Ingrese el documento ...">
+                                            </div>
+                                        <div class="col-md-1">
                                             <a href="" (click)="viewFind = !viewFind" class="dropdown-toggle" data-toggle="dropdown">
-                                                        <i class="material-icons">find_in_page</i>Buscar pacientes
-                                                </a>
-                                            <a href="" (click)="viewAdd = !viewAdd" class="dropdown-toggle" data-toggle="dropdown">
-                                                        <i class="material-icons">note_add</i>Nuevo pacientes
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
                                                 </a>
                                         </div>
-                                        <patient-find *ngIf="viewFind" (selectPatient)="handleSelectPatient($event)"></patient-find>                                        
+                                        <div class="col-md-1">
+                                            <a href="" (click)="viewAdd = !viewAdd" class="dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                                </a>
+                                        </div>
+                                        <div class="col-md-1">
+                                                <a href="" *ngIf="this.newEntry.user" (click)="viewPerfil = !viewPerfil" class="dropdown-toggle" data-toggle="dropdown">
+                                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                                    </a>
+                                            </div>
+                                        <patient-find *ngIf="viewFind" [document]="patient.document" [name]="patient.firstName" (selectPatient)="handleSelectPatient($event)"></patient-find>
                                         <app-patient-add *ngIf="viewAdd"></app-patient-add>
+                                        <app-patient-edit *ngIf="viewPerfil" [patient]="patient"></app-patient-edit>
                                     </div>
 
                                 </div>
