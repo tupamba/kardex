@@ -33,11 +33,19 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group form-black label-floating">
-                                        <label class="control-label">Subir archivo</label>
+                                        <label class="control-label">Ingresar estudios.</label>
                                         <form ngNoForm>
-                                            <input type="file" (change)="fileChange($event)" placeholder="Upload file">
-                                            <i class="fa fa-upload" aria-hidden="true"></i>
+                                            <label for="upload-photo">Cargar archivo <i class="fa fa-hand-o-up" aria-hidden="true"></i></label>
+                                            <input type="file" (change)="fileChange($event)" placeholder="Upload file" id="upload-photo">
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="urlImg && urlImg != ''">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating">
+                                        <img [src]='urlImg' />
+                                        <a (click)="uploadFile()">Subir <i class="fa fa-upload" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
