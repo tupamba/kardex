@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 // import { Observable } from 'rxjs/Observable';
 import { Observable } from "rxjs/Rx";
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 import { Room, Entry, AppSettings } from "../models/patient";
 
 const rooms: Room[] = [
@@ -14,7 +14,7 @@ const entrys: Entry[] = [];
 @Injectable()
 export class EntryService {
 
-    constructor(private db: AngularFireDatabase) {
+    constructor() {
         console.log("EntryService Start");
 
     }
@@ -22,12 +22,12 @@ export class EntryService {
         console.log("getRooms start");
         if (AppSettings.MOCK)
             return Observable.of(rooms).map(moqRooms => JSON.stringify(moqRooms));
-        else
-            return this.db.list('/rooms').map
-                (res => {
-                    console.log(res.length);
-                    return res;
-                });
+        //else
+            // return this.db.list('/rooms').map
+            //     (res => {
+            //         console.log(res.length);
+            //         return res;
+            //     });
     }
     saveEntry(entry: Entry) {
         console.log("saveEntry start");
@@ -46,26 +46,26 @@ export class EntryService {
             }
         }
         else {
-            if (!entry._id || entry._id == "")
-                return this.db.list("/entry").push(entry).then(res => {
-                    return res;
-                });
-            else
-                return this.db.object("/entry" + entry._id).update(entry).then(res => {
-                    return res;
-                });
+            // if (!entry._id || entry._id == "")
+            //     // return this.db.list("/entry").push(entry).then(res => {
+            //     //     return res;
+            //     // });
+            // else
+                // return this.db.object("/entry" + entry._id).update(entry).then(res => {
+                //     return res;
+                // });
         }
     }
     getEntry() {
         console.log("getRooms start");
-        if (AppSettings.MOCK)
-            return Observable.of(entrys).map(moqEntry => JSON.stringify(moqEntry));
-        else
-            return this.db.list('/entry').map
-                (res => {
-                    console.log(res.length);
-                    return res;
-                });
+        // if (AppSettings.MOCK)
+        //     return Observable.of(entrys).map(moqEntry => JSON.stringify(moqEntry));
+        // else
+        //     return this.db.list('/entry').map
+        //         (res => {
+        //             console.log(res.length);
+        //             return res;
+        //         });
     }
     getCurrentEntrys()
     {

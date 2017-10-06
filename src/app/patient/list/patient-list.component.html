@@ -13,6 +13,7 @@
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Apellido</th>
+                                    <th>Documento</th>
                                     <th>Sexo</th>
                                     <th>Fecha nacimiento</th>
                                     <th></th>
@@ -22,10 +23,11 @@
                                 <tr *ngFor="let item of listPatients">
                                     <td>{{item.firstName}}</td>
                                     <td>{{item.lastName}}</td>
-                                    <td *ngIf="item.sex == 'M'">Masculino</td>
-                                    <td *ngIf="item.sex == 'F'">Femenino</td>
-                                    <td>{{item.birthDate | date:'dd-MM-yyyy'}}</td>
-                                    <td class="text-danger"><a [routerLink]="['/patient-edit', item._id]">Ver</a></td>
+                                    <td>{{item.document}}</td>
+                                    <td *ngIf="item.sex == 'H'">Masculino</td>
+                                    <td *ngIf="item.sex == 'M'">Femenino</td>
+                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>
+                                    <td class="text-danger"><a [routerLink]="['/patient-edit', item.document]">Ver</a></td>
                                 </tr>
                             </tbody>
                         </table>

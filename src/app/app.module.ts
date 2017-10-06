@@ -27,10 +27,11 @@ import { PatientEditComponent } from './patient/edit/patient-edit.component';
 import { PatientAddComponent } from './patient/add/patient-add.component';
 import { EntryAddComponent } from "./entry/add/entry-add.component";
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { EntryService } from "./service/entry.service";
 import { PatientService } from "./service/patient.service";
 import { MediaService } from "./service/media.service";
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA2oM84Cam1vhwkhPaNTT1AsoOolOk71Ow",

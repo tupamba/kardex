@@ -16,7 +16,7 @@ export class EntryAddComponent implements OnInit {
   beds: Select_Item[];
   viewFind: boolean = false;
   newEntry: Entry = new Entry(new Date(), null, null, null, null, null, null, null, null, null, "");
-  patient:Patient = new Patient("","","",null,"",null,null,null,null,"");
+  patient:Patient = new Patient("","","",null,"",null,null,null,null);
   myDatePickerOptions: any;
   constructor(private _route: ActivatedRoute, private _service: EntryService) { }
 

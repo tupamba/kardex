@@ -1,4 +1,4 @@
-<div class="main-content">
+<div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -8,11 +8,12 @@
                         <p class="category"></p>
                     </div>
                     <div class="card-content table-responsive">
-                        <table class="table">
+                        <table *ngIf="listPatients" class="table">
                             <thead class="text-danger">
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Apellido</th>
+                                    <th>Documento</th>
                                     <th>Sexo</th>
                                     <th>Fecha nacimiento</th>
                                     <th></th>
@@ -22,9 +23,10 @@
                                 <tr *ngFor="let item of listPatients">
                                     <td>{{item.firstName}}</td>
                                     <td>{{item.lastName}}</td>
-                                    <td *ngIf="item.sex == 'M'">Masculino</td>
-                                    <td *ngIf="item.sex == 'F'">Femenino</td>
-                                    <td>{{item.birthDate | date:'dd-MM-yyyy'}}</td>
+                                    <td>{{item.document}}</td>
+                                    <td *ngIf="item.sex == 'H'">Masculino</td>
+                                    <td *ngIf="item.sex == 'M'">Femenino</td>
+                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>
                                     <td class="text-success"><a (click)="selectPatient(item)">Seleccionar</a></td>
                                 </tr>
                             </tbody>

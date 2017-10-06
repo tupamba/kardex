@@ -2,13 +2,14 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Patient } from "../../models/patient";
 import { PatientService } from "../../service/patient.service";
+import { Observable } from "rxjs/Rx";
 
 @Component({
   selector: 'patient-find',
   templateUrl: './patient-find.component.html',
 })
 export class PatientFindComponent {
-  listPatients: Patient[];
+  listPatients: any[];
   @Output("selectPatient")
   selPatient = new EventEmitter();
   @Input("document")
@@ -18,11 +19,12 @@ export class PatientFindComponent {
   constructor(private _route: ActivatedRoute, private _service: PatientService) { }
 
   ngOnInit() {
+    this.listPatients = [];
     if (this.name && this.name != "")
       this._service.getPatientsforName(this.name).subscribe(
         result => {
           console.log(result);
-          this.listPatients = JSON.parse(result);
+          this.listPatients = result;
         },
         error => {
           console.log("error " + error);
@@ -33,7 +35,7 @@ export class PatientFindComponent {
       this._service.getPatientsforDocument(this.doc).subscribe(
         result => {
           console.log(result);
-          this.listPatients = JSON.parse(result);
+          this.listPatients = result;
         },
         error => {
           console.log("error " + error);
@@ -44,7 +46,8 @@ export class PatientFindComponent {
       this._service.getPatients().subscribe(
         result => {
           console.log(result);
-          this.listPatients = JSON.parse(result);
+          var l = result;
+          console.log(l.length);
         },
         error => {
           console.log("error " + error);

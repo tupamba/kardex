@@ -25,29 +25,38 @@
                                     <label class="control-label">Paciente</label>
                                     <div>
                                         <div class="col-md-5">
-                                            <input type="text" class="form-control col-md-4" [(ngModel)]="patient.firstName" placeholder="Ingrese el nombre ...">
+                                            <input type="text" class="form-control" [(ngModel)]="patient.firstName" placeholder="Ingrese el nombre ...">
                                         </div>
                                         <div class="col-md-4">
-                                                <input type="text" class="form-control col-md-4" [(ngModel)]='patient.document' placeholder="Ingrese el documento ...">
-                                            </div>
+                                            <input type="text" class="form-control" [(ngModel)]='patient.document' placeholder="Ingrese el documento ...">
+                                        </div>
                                         <div class="col-md-1">
-                                            <a href="" (click)="viewFind = !viewFind" class="dropdown-toggle" data-toggle="dropdown">
+                                            <a href="" (click)="viewFind = true" class="dropdown-toggle" data-toggle="dropdown">
                                                     <i class="fa fa-search" aria-hidden="true"></i>
                                                 </a>
                                         </div>
                                         <div class="col-md-1">
-                                            <a href="" (click)="viewAdd = !viewAdd" class="dropdown-toggle" data-toggle="dropdown">
+                                            <a href="" (click)="viewAdd = true" class="dropdown-toggle" data-toggle="dropdown">
                                                     <i class="fa fa-plus-square" aria-hidden="true"></i>
                                                 </a>
                                         </div>
                                         <div class="col-md-1">
-                                                <a href="" *ngIf="this.newEntry.user" (click)="viewPerfil = !viewPerfil" class="dropdown-toggle" data-toggle="dropdown">
+                                            <a href="" *ngIf="this.newEntry.user" (click)="viewPerfil = true" class="dropdown-toggle" data-toggle="dropdown">
                                                         <i class="fa fa-user" aria-hidden="true"></i>
                                                     </a>
-                                            </div>
-                                        <patient-find *ngIf="viewFind" [document]="patient.document" [name]="patient.firstName" (selectPatient)="handleSelectPatient($event)"></patient-find>
-                                        <app-patient-add *ngIf="viewAdd"></app-patient-add>
-                                        <app-patient-edit *ngIf="viewPerfil" [patient]="patient"></app-patient-edit>
+                                        </div>
+                                        <div class="col-md-12" *ngIf="viewFind">
+                                            <span class="col-md-offset-10 col-md-2"><a (click)="viewFind = false">Cerrar <i class="fa fa-window-close" aria-hidden="true"></i></a></span>
+                                            <patient-find [document]="patient.document" [name]="patient.firstName" (selectPatient)="handleSelectPatient($event)"></patient-find>
+                                        </div>
+                                        <div class="col-md-12" *ngIf="viewAdd">
+                                            <span class="col-md-offset-10 col-md-2"><a (click)="viewAdd = false">Cerrar <i class="fa fa-window-close" aria-hidden="true"></i></a></span>
+                                            <app-patient-add></app-patient-add>
+                                        </div>
+                                        <div class="col-md-12" *ngIf="viewPerfil">
+                                            <span class="col-md-offset-10 col-md-2"><a (click)="viewPerfil = false">Cerrar <i class="fa fa-window-close" aria-hidden="true"></i></a></span>
+                                            <app-patient-edit  [patient]="patient"></app-patient-edit>
+                                        </div>
                                     </div>
 
                                 </div>

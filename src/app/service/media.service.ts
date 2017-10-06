@@ -3,7 +3,7 @@ import 'rxjs/add/operator/map';
 import { Router } from '@angular/router';
 // import { Observable } from 'rxjs/Observable';
 import { Observable } from "rxjs/Rx";
-import {  AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import {  AngularFireDatabase } from 'angularfire2/database';
 import { Room, Entry, AppSettings } from "../models/patient";
 import * as firebase from 'firebase';
 

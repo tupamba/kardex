@@ -21,7 +21,7 @@ export class PatientEditComponent implements OnInit {
       this.listPatients = this._service.getCurrentPatients();
       this._route.params.forEach((params: Params) => {
         let id = params['id'];
-        this.currentPatient = this.listPatients.find(x => x._id == id);
+        this.currentPatient = this.listPatients.find(x => x.document == id);
       });
     }
   }

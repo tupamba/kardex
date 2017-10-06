@@ -76,16 +76,16 @@ export class Patient {
         public firstName: string,
         public lastName: string,
         public document:string,
-        public birthDate: Date,
+        public birthDate: string,
         public sex: string,
-        public personalHistory: [any],
-        public rejections:[any],
-        public preferens:[any],
-        public intestinalTest: IntestinalTest,
-        public _id:string
+        public personalHistory: any,
+        public rejections:any,
+        public preferens:any,
+        public intestinalTest: any
     ) {
         
     }
+    
 }
 export class Studio {
     constructor(
@@ -99,5 +99,5 @@ export enum IntestinalTest {
     Bad
 }
 export class AppSettings {
-    public static MOCK = true;
+    public static MOCK = false;
  }

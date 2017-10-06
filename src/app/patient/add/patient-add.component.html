@@ -1,4 +1,4 @@
-<div class="main-content">
+<div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -7,7 +7,7 @@
                         <h4 class="title">Nuevo paciente</h4>
                         <p class="category">Datos del paciente</p>
                     </div>
-                    <form (ngSubmit)="onSubmit()" #patientForm="ngForm" novalidate>
+                    <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
                         <div class="card-content">
                             <div class="row">
                                 <div class="col-md-4">
@@ -16,7 +16,21 @@
                                         <input type="text" class="form-control" id="document" required [(ngModel)]="model.document" name="document">
                                     </div>
                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Nombre</label>
+                                        <input type="text" class="form-control" id="firstname" required [(ngModel)]="model.firstname" name="firstname">
+                                    </div>
+                                </div>
                                 <div class="col-md-4">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Apellido</label>
+                                        <input type="text" class="form-control" id="lastname" required [(ngModel)]="model.lastname" name="lastname">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
                                     <div class="form-group form-black label-floating">
                                         <label class="control-label">Fecha nacimiento</label>
                                         <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" placeholder="Ingrese la fecha" id="birthDate"
@@ -25,17 +39,20 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group form-black label-floating">
-                                        <label class="control-label">Nombre</label>
-                                        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+                                        <label class="control-label">Ingresar Sexo.</label>
+                                        <dropdown-generic [listDrop]='sexs' (selectItem)="handleSelectSex($event)"></dropdown-generic> 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-3">
+                                    <div class="form-black">
+                                        <label class="control-label">Estudio instestinal.</label>
+                                        <textarea class="form-control danger" placeholder="Observaciones..." id="intestinalTest" [(ngModel)]="model.intestinalTest" name="intestinalTest"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
                                     <div class="form-group form-black label-floating">
-                                        <label class="control-label">Ingresar estudios.</label>
                                         <form ngNoForm>
-                                            <label for="upload-photo">Cargar archivo <i class="fa fa-hand-o-up" aria-hidden="true"></i></label>
+                                            <label for="upload-photo">Cargar estudio <i class="fa fa-hand-o-up" aria-hidden="true"></i></label>
                                             <input type="file" (change)="fileChange($event)" placeholder="Upload file" id="upload-photo">
                                         </form>
                                     </div>
@@ -46,6 +63,20 @@
                                     <div class="form-group form-black label-floating">
                                         <img [src]='urlImg' />
                                         <a (click)="uploadFile()">Subir <i class="fa fa-upload" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-black label-floating">
+                                        <label class="control-label">Preferencias</label>
+                                        <textarea class="form-control danger" id="preference" [(ngModel)]="model.preference" name="preference"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-black label-floating">
+                                        <label class="control-label">Rechazos</label>
+                                        <textarea class="form-control danger" id="reject" [(ngModel)]="model.reject" name="reject"></textarea>
                                     </div>
                                 </div>
                             </div>

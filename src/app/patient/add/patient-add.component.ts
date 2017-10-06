@@ -5,6 +5,7 @@ import { Patient } from "../../models/patient";
 import { PatientService } from "../../service/patient.service";
 import { MediaService } from "../../service/media.service";
 import { MyDatePickerModule } from 'mydatepicker/src/my-date-picker/my-date-picker.module';
+import { DropdownComponent, Select_Item } from "../../utils/dropdown/dropdown";
 
 @Component({
   selector: 'app-patient-add',
@@ -17,18 +18,31 @@ export class PatientAddComponent implements OnInit {
   myDatePickerOptions: any;
   urlImg: string;
   file: File;
+  sexs: Select_Item[];
   constructor(private _route: ActivatedRoute, private _service: PatientService, private _media: MediaService) { }
 
   ngOnInit() {
-    this.model = new modelView("", "", "");
-    this.listPatients = this._service.getCurrentPatients();
-    this._route.params.forEach((params: Params) => {
-      let id = params['id'];
-      this.currentPatient = this.listPatients.find(x => x._id == id);
-    });
+    this.sexs = [
+      { id: 1, value: 'H', view: 'Hombre' },
+      { id: 2, value: 'M', view: 'Mujer' },
+      { id: 3, value: 'I', view: 'Indefinido' }
+    ];
+    this.model = new modelView("", "", "", "", "", "", "", "");
+
   }
   onSubmit() {
     console.log("submit");
+    this.currentPatient = new Patient(this.model.firstname, this.model.lastname, this.model.document,
+      this.model.birthDate, this.model.sex, null, { date: new Date(), data: this.model.reject },
+      { date: new Date(), data: this.model.preference }, { date: new Date(), data: this.model.intestinalTest });
+    this._service.savePatient(this.currentPatient).then(
+      result => {
+        console.log("savePatient ok: " + result);
+      },
+      error => {
+        console.log("savePatient error: " + error);
+      }
+    );
   }
   onDateChanged(event) {
     this.model.birthDate = event;
@@ -60,13 +74,21 @@ export class PatientAddComponent implements OnInit {
 
     }
   }
-
+  handleSelectSex(event) {
+    console.log(event);
+    this.model.sex = event;
+  }
 }
 export class modelView {
   constructor(
-    public name: string,
+    public firstname: string,
+    public lastname: string,
     public document: string,
     public birthDate: string,
+    public sex: string,
+    public intestinalTest: string,
+    public preference: string,
+    public reject: string
   ) {
 
   }
