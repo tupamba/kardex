@@ -13,19 +13,19 @@
                                     <div class="col-md-4">
                                         <div class="form-group form-black label-floating">
                                             <label class="control-label">Documento</label>
-                                            <input type="text" class="form-control" id="document" required [(ngModel)]="model.document" name="document">
+                                            <input type="text" class="form-control" id="document" required [(ngModel)]="model.document" name="document" readonly>
                                         </div>
                                     </div>
                                      <div class="col-md-4">
                                         <div class="form-group form-black label-floating">
                                             <label class="control-label">Nombre</label>
-                                            <input type="text" class="form-control" id="firstname" required [(ngModel)]="model.firstname" name="firstname">
+                                            <input type="text" class="form-control" id="firstname" required [(ngModel)]="model.firstName" name="firstname">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group form-black label-floating">
                                             <label class="control-label">Apellido</label>
-                                            <input type="text" class="form-control" id="lastname" required [(ngModel)]="model.lastname" name="lastname">
+                                            <input type="text" class="form-control" id="lastname" required [(ngModel)]="model.lastName" name="lastname">
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
-                                <button type="submit" class="btn btn-success" [disabled]="!patientForm.form.valid">Agregar</button>
+                                <button type="submit" class="btn btn-success" [disabled]="!patientForm.form.valid">Modificar</button>
                             </div>
                         </form>
                     </div>

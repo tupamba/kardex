@@ -8,7 +8,10 @@
                         <p class="category"></p>
                     </div>
                     <div class="card-content table-responsive">
-                        <table *ngIf="listPatients" class="table">
+                        <div *ngIf="!listPatients || listPatients.length == 0">
+                            <label class="label label-warning" style="color:black">No se encontraron pacientes para ese nombre o documento ingresado.</label>
+                        </div>
+                        <table *ngIf="listPatients && listPatients.length > 0" class="table">
                             <thead class="text-danger">
                                 <tr>
                                     <th>Nombre</th>

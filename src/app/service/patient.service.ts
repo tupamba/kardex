@@ -36,8 +36,8 @@ export class PatientService {
         });
     }
     getPatientsforName(name: string) {
-        console.log("getPatients start");
-        this.patients = this.db.list('patients', ref => ref.orderByChild('name').equalTo(name));
+        console.log("getPatients start " + name);
+        this.patients = this.db.list('patients', ref => ref.orderByChild('firstName').equalTo(name));
         this.items = this.patients.valueChanges();
         return this.items.map
         (res => {

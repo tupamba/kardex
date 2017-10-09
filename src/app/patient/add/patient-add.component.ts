@@ -19,6 +19,7 @@ export class PatientAddComponent implements OnInit {
   urlImg: string;
   file: File;
   sexs: Select_Item[];
+  submitResult:string;
   constructor(private _route: ActivatedRoute, private _service: PatientService, private _media: MediaService) { }
 
   ngOnInit() {
@@ -37,10 +38,13 @@ export class PatientAddComponent implements OnInit {
       { date: new Date(), data: this.model.preference }, { date: new Date(), data: this.model.intestinalTest });
     this._service.savePatient(this.currentPatient).then(
       result => {
+        this.uploadFile();
         console.log("savePatient ok: " + result);
+        this.submitResult = "ok";
       },
       error => {
         console.log("savePatient error: " + error);
+        this.submitResult = "ok";
       }
     );
   }
@@ -62,7 +66,7 @@ export class PatientAddComponent implements OnInit {
   uploadFile() {
     console.log("uploadFile " + this.file.name);
     this._media.folder = "images";
-    this._media.upload(this.file);
+    this._media.upload(this.file, this.model.document);
     this.urlImg = "";
   }
   readFile(file: File, reader, callback) {

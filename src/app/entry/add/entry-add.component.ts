@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Entry, Patient } from "../../models/patient";
 import { EntryService } from "../../service/entry.service";
@@ -18,6 +18,7 @@ export class EntryAddComponent implements OnInit {
   newEntry: Entry = new Entry(new Date(), null, null, null, null, null, null, null, null, null, "");
   patient:Patient = new Patient("","","",null,"",null,null,null,null);
   myDatePickerOptions: any;
+  @ViewChild('patientSearch') elementSearch;
   constructor(private _route: ActivatedRoute, private _service: EntryService) { }
 
   ngOnInit() {
@@ -43,5 +44,10 @@ export class EntryAddComponent implements OnInit {
   {
     console.log(event.number);
    
+  }
+  searchPatient()
+  {
+    this.viewFind = true;
+    this.elementSearch.search();
   }
 }

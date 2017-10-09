@@ -7,6 +7,7 @@ import { Observable } from "rxjs/Rx";
 @Component({
   selector: 'patient-find',
   templateUrl: './patient-find.component.html',
+  exportAs: 'patientfind'
 })
 export class PatientFindComponent {
   listPatients: any[];
@@ -19,6 +20,12 @@ export class PatientFindComponent {
   constructor(private _route: ActivatedRoute, private _service: PatientService) { }
 
   ngOnInit() {
+    this.search();
+  }
+  selectPatient(item) {
+    this.selPatient.emit(item);
+  }
+  search() {
     this.listPatients = [];
     if (this.name && this.name != "")
       this._service.getPatientsforName(this.name).subscribe(
@@ -54,9 +61,7 @@ export class PatientFindComponent {
           this.listPatients = [];
         }
       );
-  }
-  selectPatient(item) {
-    this.selPatient.emit(item);
+
   }
 
 }

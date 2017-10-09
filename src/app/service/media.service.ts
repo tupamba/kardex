@@ -15,7 +15,7 @@ export class MediaService {
         console.log("EntryService Start");
         let storageRef = firebase.storage().ref();
     }
-    upload(selectedFile:File) {
+    upload(selectedFile:File, document:string) {
         // Create a root reference
         let storageRef = firebase.storage().ref();
 
@@ -31,7 +31,7 @@ export class MediaService {
             var iRef = storageRef.child(path);
             iRef.put(selectedFile).then((snapshot) => {
                 console.log('Uploaded a blob or file! Now storing the reference at',`/${this.folder}/images/`);
-                af.list(`/${folder}/images/`).push({ path: path, filename: selectedFile.name })
+                af.list(`/${folder}/images/`).push({ path: path, filename: selectedFile.name, patientDocument:document })
             });
         // }
         
