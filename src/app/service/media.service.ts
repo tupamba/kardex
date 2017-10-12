@@ -27,13 +27,19 @@ export class MediaService {
             let router = this.router;
             let af = this.db;
             let folder = this.folder;
-            let path = `/${this.folder}/${selectedFile.name}`;
-            var iRef = storageRef.child(path);
+                let path = `/${document}/${selectedFile.name}`;
+                var iRef = storageRef.child(path);
             iRef.put(selectedFile).then((snapshot) => {
-                console.log('Uploaded a blob or file! Now storing the reference at',`/${this.folder}/images/`);
-                af.list(`/${folder}/images/`).push({ path: path, filename: selectedFile.name, patientDocument:document })
+                console.log('Uploaded a blob or file! Now storing the reference at',`/${document}/images/`);
+                // af.list(`/${folder}/images/`).push({ path: path, filename: selectedFile.name, patientDocument:document })
             });
         // }
         
+    }
+    getImage(path:string) {
+        // Create a root reference
+        let storageRef = firebase.storage().ref();
+        var iRef = storageRef.child(path);
+        return iRef.getDownloadURL();
     }
 }

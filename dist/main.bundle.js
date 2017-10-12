@@ -118,22 +118,26 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__notifications_notifications_component__ = __webpack_require__("../../../../../src/app/notifications/notifications.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__upgrade_upgrade_component__ = __webpack_require__("../../../../../src/app/upgrade/upgrade.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__utils_dropdown_dropdown__ = __webpack_require__("../../../../../src/app/utils/dropdown/dropdown.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__patient_find_patient_find_component__ = __webpack_require__("../../../../../src/app/patient/find/patient-find.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__patient_list_patient_list_component__ = __webpack_require__("../../../../../src/app/patient/list/patient-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__patient_edit_patient_edit_component__ = __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__patient_add_patient_add_component__ = __webpack_require__("../../../../../src/app/patient/add/patient-add.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__entry_add_entry_add_component__ = __webpack_require__("../../../../../src/app/entry/add/entry-add.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__service_entry_service__ = __webpack_require__("../../../../../src/app/service/entry.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__studio_list_studio_list_component__ = __webpack_require__("../../../../../src/app/studio/list/studio-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__studio_studio_add_component__ = __webpack_require__("../../../../../src/app/studio/studio-add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__patient_find_patient_find_component__ = __webpack_require__("../../../../../src/app/patient/find/patient-find.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__patient_list_patient_list_component__ = __webpack_require__("../../../../../src/app/patient/list/patient-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__patient_edit_patient_edit_component__ = __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__patient_add_patient_add_component__ = __webpack_require__("../../../../../src/app/patient/add/patient-add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__entry_add_entry_add_component__ = __webpack_require__("../../../../../src/app/entry/add/entry-add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__service_entry_service__ = __webpack_require__("../../../../../src/app/service/entry.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -187,11 +191,13 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__maps_maps_component__["a" /* MapsComponent */],
             __WEBPACK_IMPORTED_MODULE_15__notifications_notifications_component__["a" /* NotificationsComponent */],
             __WEBPACK_IMPORTED_MODULE_16__upgrade_upgrade_component__["a" /* UpgradeComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__patient_add_patient_add_component__["a" /* PatientAddComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__patient_list_patient_list_component__["a" /* PatientListComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__patient_edit_patient_edit_component__["a" /* PatientEditComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__entry_add_entry_add_component__["a" /* EntryAddComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__patient_find_patient_find_component__["a" /* PatientFindComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__patient_add_patient_add_component__["a" /* PatientAddComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__patient_list_patient_list_component__["a" /* PatientListComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__patient_edit_patient_edit_component__["a" /* PatientEditComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__studio_studio_add_component__["a" /* StudioAddComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__studio_list_studio_list_component__["a" /* StudioListComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__entry_add_entry_add_component__["a" /* EntryAddComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__patient_find_patient_find_component__["a" /* PatientFindComponent */],
             __WEBPACK_IMPORTED_MODULE_17__utils_dropdown_dropdown__["a" /* DropdownComponent */]
         ],
         imports: [
@@ -201,11 +207,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* ComponentsModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */],
             __WEBPACK_IMPORTED_MODULE_5__app_routing__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_23_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
-            __WEBPACK_IMPORTED_MODULE_24_angularfire2_database__["b" /* AngularFireDatabaseModule */],
+            __WEBPACK_IMPORTED_MODULE_25_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+            __WEBPACK_IMPORTED_MODULE_26_angularfire2_database__["b" /* AngularFireDatabaseModule */],
             __WEBPACK_IMPORTED_MODULE_8_mydatepicker_src_my_date_picker_my_date_picker_module__["a" /* MyDatePickerModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_25__service_entry_service__["a" /* EntryService */], __WEBPACK_IMPORTED_MODULE_26__service_patient_service__["a" /* PatientService */], __WEBPACK_IMPORTED_MODULE_27__service_media_service__["a" /* MediaService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_27__service_entry_service__["a" /* EntryService */], __WEBPACK_IMPORTED_MODULE_28__service_patient_service__["a" /* PatientService */], __WEBPACK_IMPORTED_MODULE_29__service_media_service__["a" /* MediaService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -557,6 +563,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ROUTES = [
     { path: 'dashboard', title: 'Dashboard', icon: 'dashboard', class: '' },
     { path: 'user-profile', title: 'User Profile', icon: 'person', class: '' },
+    { path: 'patient-add', title: 'Nuevo paciente', icon: 'library_books', class: '' },
     { path: 'patient-list', title: 'Lista de pacientes', icon: 'content_paste', class: '' },
     { path: 'entry-add', title: 'Nuevo ingreso', icon: 'library_books', class: '' },
     { path: 'icons', title: 'Icons', icon: 'bubble_chart', class: '' },
@@ -813,9 +820,9 @@ var EntryAddComponent = (function () {
     }
     EntryAddComponent.prototype.ngOnInit = function () {
         this.beds = [
-            { id: 1, value: { number: 1, Room: { number: 1, floor: 1 } }, view: 'Cama 1' },
-            { id: 2, value: { number: 2, Room: { number: 1, floor: 1 } }, view: 'Cama 2' },
-            { id: 3, value: { number: 3, Room: { number: 1, floor: 1 } }, view: 'Cama 3' }
+            { id: 1, value: { number: 1, Room: { number: 1, floor: 1 } }, view: 'Cama 1', select: false },
+            { id: 2, value: { number: 2, Room: { number: 1, floor: 1 } }, view: 'Cama 2', select: false },
+            { id: 3, value: { number: 3, Room: { number: 1, floor: 1 } }, view: 'Cama 3', select: false }
         ];
     };
     EntryAddComponent.prototype.onChange = function () {
@@ -1023,7 +1030,7 @@ MapsComponent = __decorate([
 /* unused harmony export NutritionistPrescription */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Patient; });
 /* unused harmony export Studio */
-/* unused harmony export IntestinalTest */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return StudioType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSettings; });
 var Room = (function () {
     function Room(number, floor) {
@@ -1117,7 +1124,7 @@ var NutritionistPrescription = (function () {
 }());
 
 var Patient = (function () {
-    function Patient(firstName, lastName, document, birthDate, sex, personalHistory, rejections, preferens, intestinalTest) {
+    function Patient(firstName, lastName, document, birthDate, sex, personalHistory, rejections, preferens, studios) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.document = document;
@@ -1126,25 +1133,25 @@ var Patient = (function () {
         this.personalHistory = personalHistory;
         this.rejections = rejections;
         this.preferens = preferens;
-        this.intestinalTest = intestinalTest;
+        this.studios = studios;
     }
     return Patient;
 }());
 
 var Studio = (function () {
-    function Studio(type, date, description) {
+    function Studio(type, date, description, image) {
         this.type = type;
         this.date = date;
         this.description = description;
+        this.image = image;
     }
     return Studio;
 }());
 
-var IntestinalTest;
-(function (IntestinalTest) {
-    IntestinalTest[IntestinalTest["Normal"] = 0] = "Normal";
-    IntestinalTest[IntestinalTest["Bad"] = 1] = "Bad";
-})(IntestinalTest || (IntestinalTest = {}));
+var StudioType;
+(function (StudioType) {
+    StudioType[StudioType["Instestinal"] = 0] = "Instestinal";
+})(StudioType || (StudioType = {}));
 var AppSettings = (function () {
     function AppSettings() {
     }
@@ -1235,7 +1242,7 @@ NotificationsComponent = __decorate([
 /***/ "../../../../../src/app/patient/add/patient-add.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo paciente</h4>\n                        <p class=\"category\">Datos del paciente</p>\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'ok'\" class=\"alert alert-success\">\n                        Paciente ingresado correctamente.\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'error'\" class=\"alert alert-success\">\n                            No se pudo ingresar el paciente..\n                        </div>\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                        <div class=\"card-content\">\n                            <div class=\"row\">\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Documento</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Nombre</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstname\" name=\"firstname\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Apellido</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastname\" name=\"lastname\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Fecha nacimiento</label>\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                            required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Ingresar Sexo.</label>\n                                        <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-black\">\n                                        <label class=\"control-label\">Estudio instestinal.</label>\n                                        <textarea class=\"form-control danger\" placeholder=\"Observaciones...\" id=\"intestinalTest\" [(ngModel)]=\"model.intestinalTest\"\n                                            name=\"intestinalTest\"></textarea>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-2\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <form ngNoForm>\n                                            <label for=\"upload-photo\">Cargar estudio <i class=\"fa fa-hand-o-up\" aria-hidden=\"true\"></i></label>\n                                            <input type=\"file\" (change)=\"fileChange($event)\" placeholder=\"Upload file\" id=\"upload-photo\">\n                                        </form>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"urlImg && urlImg != ''\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <img [src]='urlImg' />\n                                        <!-- <a (click)=\"uploadFile()\">Subir <i class=\"fa fa-upload\" aria-hidden=\"true\"></i></a> -->\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Preferencias</label>\n                                        <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preference\" name=\"preference\"></textarea>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Rechazos</label>\n                                        <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.reject\" name=\"reject\"></textarea>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"clearfix\"></div>\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo paciente</h4>\n                        <p class=\"category\">Datos del paciente</p>\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'ok'\" class=\"alert alert-success\">\n                        Paciente ingresado correctamente.\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'error'\" class=\"alert alert-success\">\n                        No se pudo ingresar el paciente..\n                    </div>\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                        <div class=\"card-content\">\n                            <div class=\"row\">\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Documento</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Nombre</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstname\" name=\"firstname\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Apellido</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastname\" name=\"lastname\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-5\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Fecha nacimiento</label>\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                            required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Ingresar Sexo.</label>\n                                        <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <a href=\"\" (click)=\"viewStudio = !viewStudio\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>Agregar estudio\n                                            </a>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"viewStudio\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <app-studio-add (studio)=\"handleStudio($event)\"></app-studio-add>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"studios && studios.length > 0\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-list [Document]=\"model.document\" [ListStudio]=\"studios\"></app-studio-list>\n                                        </div>\n                                    </div>\n                                </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Preferencias</label>\n                                        <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preference\" name=\"preference\"></textarea>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Rechazos</label>\n                                        <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.reject\" name=\"reject\"></textarea>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"clearfix\"></div>\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1269,21 +1276,27 @@ var PatientAddComponent = (function () {
         this._route = _route;
         this._service = _service;
         this._media = _media;
+        this.viewStudio = false;
+        this.file = new Array();
+        this.folderImage = "images";
+        this.studios = new Array();
     }
     PatientAddComponent.prototype.ngOnInit = function () {
+        console.log("PatientAddComponent");
         this.sexs = [
-            { id: 1, value: 'H', view: 'Hombre' },
-            { id: 2, value: 'M', view: 'Mujer' },
-            { id: 3, value: 'I', view: 'Indefinido' }
+            { id: 1, value: 'H', view: 'Hombre', select: false },
+            { id: 2, value: 'M', view: 'Mujer', select: false },
+            { id: 3, value: 'I', view: 'Indefinido', select: false }
         ];
         this.model = new modelView("", "", "", "", "", "", "", "");
     };
     PatientAddComponent.prototype.onSubmit = function () {
         var _this = this;
         console.log("submit");
-        this.currentPatient = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */](this.model.firstname, this.model.lastname, this.model.document, this.model.birthDate, this.model.sex, null, { date: new Date(), data: this.model.reject }, { date: new Date(), data: this.model.preference }, { date: new Date(), data: this.model.intestinalTest });
+        this.currentPatient = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */](this.model.firstname, this.model.lastname, this.model.document, this.model.birthDate, this.model.sex, null, { date: new Date(), data: this.model.reject }, { date: new Date(), data: this.model.preference }, this.studios);
         this._service.savePatient(this.currentPatient).then(function (result) {
-            _this.uploadFile();
+            if (_this.file)
+                _this.uploadFile();
             console.log("savePatient ok: " + result);
             _this.submitResult = "ok";
         }, function (error) {
@@ -1294,22 +1307,17 @@ var PatientAddComponent = (function () {
     PatientAddComponent.prototype.onDateChanged = function (event) {
         this.model.birthDate = event;
     };
-    PatientAddComponent.prototype.fileChange = function (event) {
-        console.log("fileChange");
-        var reader = new FileReader();
-        var fileList = event.target.files;
-        if (fileList.length > 0) {
-            this.file = fileList[0];
-            this.readFile(this.file, reader, function (result) {
-            });
-            reader.readAsDataURL(this.file);
-        }
+    PatientAddComponent.prototype.handleStudio = function (event) {
+        this.studios.push({ date: event.date, description: event.description, image: event.image, type: event.type });
+        this.file.push(event.file);
+        this.viewStudio = false;
     };
     PatientAddComponent.prototype.uploadFile = function () {
-        console.log("uploadFile " + this.file.name);
-        this._media.folder = "images";
-        this._media.upload(this.file, this.model.document);
-        this.urlImg = "";
+        var _this = this;
+        console.log("uploadFile");
+        this.file.forEach(function (element) {
+            _this._media.upload(element, _this.model.document);
+        });
     };
     PatientAddComponent.prototype.readFile = function (file, reader, callback) {
         var _this = this;
@@ -1355,7 +1363,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/patient/edit/patient-edit.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card\">\n                        <div class=\"card-header\" data-background-color=\"red\">\n                            <h4 class=\"title\">Nuevo paciente</h4>\n                            <p class=\"category\">Datos del paciente</p>\n                        </div>\n                        <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                            <div class=\"card-content\">\n                                <div class=\"row\">\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Documento</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\" readonly>\n                                        </div>\n                                    </div>\n                                     <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Nombre</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstName\" name=\"firstname\">\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Apellido</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastName\" name=\"lastname\">\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Fecha nacimiento</label>\n                                            <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                                required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Ingresar Sexo.</label>\n                                            <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic> \n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-black\">\n                                            <label class=\"control-label\">Estudio instestinal.</label>\n                                            <textarea class=\"form-control danger\" placeholder=\"Observaciones...\" id=\"intestinalTest\" [(ngModel)]=\"model.intestinalTest\" name=\"intestinalTest\"></textarea>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-2\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <form ngNoForm>\n                                                <label for=\"upload-photo\">Cargar estudio <i class=\"fa fa-hand-o-up\" aria-hidden=\"true\"></i></label>\n                                                <input type=\"file\" (change)=\"fileChange($event)\" placeholder=\"Upload file\" id=\"upload-photo\">\n                                            </form>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"urlImg && urlImg != ''\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <img [src]='urlImg' />\n                                            <a (click)=\"uploadFile()\">Subir <i class=\"fa fa-upload\" aria-hidden=\"true\"></i></a>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Preferencias</label>\n                                            <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preference\" name=\"preference\"></textarea>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Rechazos</label>\n                                            <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.reject\" name=\"reject\"></textarea>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"clearfix\"></div>\n                                <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Modificar</button>\n                            </div>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"main-content\">\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card\">\n                        <div class=\"card-header\" data-background-color=\"red\">\n                            <h4 class=\"title\">Paciente</h4>\n                            <p class=\"category\">Datos del paciente</p>\n                        </div>\n                        <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                            <div class=\"card-content\">\n                                <div class=\"row\">\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Documento</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\" readonly>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Nombre</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstName\" name=\"firstname\">\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Apellido</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastName\" name=\"lastname\">\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-5\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Fecha nacimiento</label>\n                                            <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                                required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Ingresar Sexo.</label>\n                                            <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <a href=\"\" (click)=\"viewStudio = !viewStudio\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>Agregar estudio\n                                                    </a>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"viewStudio\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-add (studio)=\"handleStudio($event)\"></app-studio-add>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"model.studios && model.studios.length > 0\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-list [Document]=\"model.document\" [ListStudio]=\"model.studios\"></app-studio-list>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Preferencias</label>\n                                            <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preferens.data\" name=\"preference\"></textarea>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Rechazos</label>\n                                            <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.rejections.data\" name=\"reject\"></textarea>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <button type=\"button\" class=\"btn\">Historial</button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"clearfix\"></div>\n                                <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Modificar</button>\n                            </div>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1388,9 +1396,18 @@ var PatientEditComponent = (function () {
         this._route = _route;
         this._service = _service;
         this._media = _media;
+        this.viewStudio = false;
+        this.file = new Array();
+        this.folderImage = "images";
     }
     PatientEditComponent.prototype.ngOnInit = function () {
         var _this = this;
+        console.log("PatientEditComponent start");
+        this.sexs = [
+            { id: 1, value: 'H', view: 'Hombre', select: false },
+            { id: 2, value: 'M', view: 'Mujer', select: false },
+            { id: 3, value: 'I', view: 'Indefinido', select: false }
+        ];
         if (this.patient) {
             this.model = this.patient;
         }
@@ -1401,12 +1418,21 @@ var PatientEditComponent = (function () {
                 _this.model = _this.listPatients.find(function (x) { return x.document == id; });
             });
         }
+        var s = this.sexs.find(function (x) { return _this.model.sex == x.value; });
+        if (s)
+            s.select = true;
     };
     PatientEditComponent.prototype.uploadFile = function () {
-        console.log("uploadFile " + this.file.name);
-        this._media.folder = "images";
-        this._media.upload(this.file, "");
-        this.urlImg = "";
+        var _this = this;
+        console.log("uploadFile ");
+        this.file.forEach(function (element) {
+            _this._media.upload(element, _this.model.document);
+        });
+    };
+    PatientEditComponent.prototype.handleStudio = function (event) {
+        this.model.studios.push({ date: event.date, description: event.description, image: event.image, type: event.type });
+        this.file.push(event.file);
+        this.viewStudio = false;
     };
     return PatientEditComponent;
 }());
@@ -1418,6 +1444,7 @@ PatientEditComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-patient-edit',
         template: __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.html"),
+        exportAs: 'patientedit'
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */]) === "function" && _d || Object])
 ], PatientEditComponent);
@@ -1430,7 +1457,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/patient/find/patient-find.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Buscar pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <div *ngIf=\"!listPatients || listPatients.length == 0\">\n                            <label class=\"label label-warning\" style=\"color:black\">No se encontraron pacientes para ese nombre o documento ingresado.</label>\n                        </div>\n                        <table *ngIf=\"listPatients && listPatients.length > 0\" class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-success\"><a (click)=\"selectPatient(item)\">Seleccionar</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-md-12\"></div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Buscar pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <div *ngIf=\"!listPatients || listPatients.length == 0\">\n                            <label class=\"label label-warning\" style=\"color:black\">No se encontraron pacientes para ese nombre o documento ingresado.</label>\n                        </div>\n                        <table *ngIf=\"listPatients && listPatients.length > 0\" class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-success\"><a (click)=\"selectPatient(item)\">Seleccionar</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-md-12\"></div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1526,7 +1553,7 @@ var _a, _b;
 /***/ "../../../../../src/app/patient/list/patient-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Lista de pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-danger\"><a [routerLink]=\"['/patient-edit', item.document]\">Ver</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-md-12\"></div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Lista de pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-danger\"><a [routerLink]=\"['/patient-edit', item.document]\">Ver</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1699,7 +1726,6 @@ var MediaService = (function () {
         var storageRef = __WEBPACK_IMPORTED_MODULE_4_firebase__["storage"]().ref();
     }
     MediaService.prototype.upload = function (selectedFile, document) {
-        var _this = this;
         // Create a root reference
         var storageRef = __WEBPACK_IMPORTED_MODULE_4_firebase__["storage"]().ref();
         var success = false;
@@ -1710,13 +1736,19 @@ var MediaService = (function () {
         var router = this.router;
         var af = this.db;
         var folder = this.folder;
-        var path = "/" + this.folder + "/" + selectedFile.name;
+        var path = "/" + document + "/" + selectedFile.name;
         var iRef = storageRef.child(path);
         iRef.put(selectedFile).then(function (snapshot) {
-            console.log('Uploaded a blob or file! Now storing the reference at', "/" + _this.folder + "/images/");
-            af.list("/" + folder + "/images/").push({ path: path, filename: selectedFile.name, patientDocument: document });
+            console.log('Uploaded a blob or file! Now storing the reference at', "/" + document + "/images/");
+            // af.list(`/${folder}/images/`).push({ path: path, filename: selectedFile.name, patientDocument:document })
         });
         // }
+    };
+    MediaService.prototype.getImage = function (path) {
+        // Create a root reference
+        var storageRef = __WEBPACK_IMPORTED_MODULE_4_firebase__["storage"]().ref();
+        var iRef = storageRef.child(path);
+        return iRef.getDownloadURL();
     };
     return MediaService;
 }());
@@ -1822,6 +1854,185 @@ PatientService = __decorate([
 
 var _a;
 //# sourceMappingURL=patient.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/studio/list/studio-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid\">\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <div class=\"card\">\n                <div>\n                    <h4 class=\"title\">Lista de estudios</h4>\n                </div>\n                <div class=\"card-content table-responsive\">\n                    <table class=\"table\">\n                        <thead class=\"text-danger\">\n                            <tr>\n                                <th>Tipo</th>\n                                <th>Fecha</th>\n                                <th>Descripción</th>\n                                <th></th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr *ngFor=\"let item of listStudio\">\n                                <td>{{getType(item.type)}}</td>\n                                <td>{{item.date.formatted | date:'dd-MM-yyyy'}}</td>\n                                <td>{{item.description}}</td>\n                                <td><a (click)=\"getImage(item.image)\">Ver estudio</a></td>\n                            </tr>\n                        </tbody>\n                    </table>\n\n                </div>\n            </div>\n        </div>\n        <div class=\"row\" *ngIf=\"urlImg && urlImg != ''\">\n            <div class=\"col-md-12\">\n                    <span class=\"col-md-offset-10 col-md-2\"><a (click)=\"urlImg = ''\">Cerrar <i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></a></span>\n                <div class=\"form-group form-black label-floating\">\n                    <img [src]='urlImg' />\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/studio/list/studio-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudioListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_patient__ = __webpack_require__("../../../../../src/app/models/patient.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var StudioListComponent = (function () {
+    function StudioListComponent(_media) {
+        this._media = _media;
+        this.listStudio = new Array();
+    }
+    StudioListComponent.prototype.ngOnInit = function () {
+        console.log("StudioListComponent ngOnInit");
+    };
+    StudioListComponent.prototype.getType = function (type) {
+        return __WEBPACK_IMPORTED_MODULE_1__models_patient__["d" /* StudioType */][type];
+    };
+    StudioListComponent.prototype.getImage = function (name) {
+        var _this = this;
+        console.log("StudioListComponent getImage");
+        var path = "/" + this.document + "/" + name;
+        console.log(path);
+        this._media.getImage(path).then(function (url) {
+            console.log("url: " + url);
+            _this.urlImg = url;
+        });
+    };
+    return StudioListComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("ListStudio"),
+    __metadata("design:type", Object)
+], StudioListComponent.prototype, "listStudio", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("Document"),
+    __metadata("design:type", String)
+], StudioListComponent.prototype, "document", void 0);
+StudioListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-studio-list',
+        template: __webpack_require__("../../../../../src/app/studio/list/studio-list.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_media_service__["a" /* MediaService */]) === "function" && _a || Object])
+], StudioListComponent);
+
+var _a;
+//# sourceMappingURL=studio-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/studio/studio-add.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n                <div class=\"card\">\r\n                    <div class=\"card-header\" data-background-color=\"gray\">\r\n                        <h4 class=\"title\">Nuevo estudio</h4>\r\n                        <p class=\"category\">Datos del estudio</p>\r\n                    </div>\r\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\r\n                        <div class=\"card-content\">\r\n                            <div class=\"row\">\r\n                                <div class=\"col-md-5\">\r\n                                    <div class=\"form-group form-black label-floating\">\r\n                                        <label class=\"control-label\">Esutdio</label>\r\n                                        <dropdown-generic [listDrop]='studios' (selectItem)=\"handleSelectStudio($event)\"></dropdown-generic>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"col-md-4\">\r\n                                    <div class=\"form-group form-black label-floating\">\r\n                                        <label class=\"control-label\">Fecha del estudio</label>\r\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"date\"\r\n                                            required [(ngModel)]=\"studioOut.date\" name=\"date\"></my-date-picker>\r\n\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"col-md-3\">\r\n                                    <div class=\"form-group form-black label-floating\">\r\n                                        <label class=\"control-label\">Subir estudio</label>\r\n                                        <form ngNoForm>\r\n                                            <label for=\"upload-photo\">Cargar estudio <i class=\"fa fa-hand-o-up\" aria-hidden=\"true\"></i></label>\r\n                                            <input type=\"file\" (change)=\"fileChange($event)\" placeholder=\"Subir archivo\" id=\"upload-photo\">\r\n                                        </form>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"row\" *ngIf=\"urlImg && urlImg != ''\">\r\n                                <div class=\"col-md-12\">\r\n                                    <div class=\"form-group form-black label-floating\">\r\n                                        <img [src]='urlImg' />\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"row\">\r\n                                <div class=\"form-black\">\r\n                                    <div class=\"col-md-12\">\r\n                                        <label class=\"control-label\">Descripción</label>\r\n                                        <textarea class=\"form-control danger\" placeholder=\"Observaciones...\" id=\"description\" [(ngModel)]=\"studioOut.description\" name=\"description\"></textarea>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"clearfix\"></div>\r\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\r\n                        </div>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/studio/studio-add.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudioAddComponent; });
+/* unused harmony export ModelStudio */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_patient__ = __webpack_require__("../../../../../src/app/models/patient.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var StudioAddComponent = (function () {
+    function StudioAddComponent(_route, _service, _media) {
+        this._route = _route;
+        this._service = _service;
+        this._media = _media;
+        this.folderImage = "images";
+        this.studio = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+    }
+    StudioAddComponent.prototype.ngOnInit = function () {
+        this.studios = [{ id: 0, value: __WEBPACK_IMPORTED_MODULE_2__models_patient__["d" /* StudioType */].Instestinal, view: "Intestinal", select: false }];
+        this.studioOut = new ModelStudio(null, "", "", "", null);
+    };
+    StudioAddComponent.prototype.onSubmit = function () {
+        console.log("submit");
+        var nameFile = "";
+        if (this.file)
+            this.studioOut.image = this.file.name;
+        this.studio.emit(this.studioOut);
+    };
+    StudioAddComponent.prototype.fileChange = function (event) {
+        console.log("fileChange");
+        var reader = new FileReader();
+        var fileList = event.target.files;
+        if (fileList.length > 0) {
+            this.file = fileList[0];
+            this.readFile(this.file, reader, function (result) {
+            });
+            reader.readAsDataURL(this.file);
+        }
+    };
+    StudioAddComponent.prototype.readFile = function (file, reader, callback) {
+        var _this = this;
+        reader.onload = function () {
+            callback(reader.result);
+            _this.urlImg = reader.result;
+            _this.studioOut.file = file;
+            console.log(reader.result);
+        };
+    };
+    StudioAddComponent.prototype.onDateChanged = function (event) {
+        this.studioOut.date = event;
+    };
+    StudioAddComponent.prototype.handleSelectStudio = function (event) {
+        console.log(event);
+        this.studioOut.type = event;
+    };
+    return StudioAddComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])("studio"),
+    __metadata("design:type", Object)
+], StudioAddComponent.prototype, "studio", void 0);
+StudioAddComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-studio-add',
+        template: __webpack_require__("../../../../../src/app/studio/studio-add.component.html"),
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */]) === "function" && _c || Object])
+], StudioAddComponent);
+
+var ModelStudio = (function () {
+    function ModelStudio(type, date, description, image, file) {
+        this.type = type;
+        this.date = date;
+        this.description = description;
+        this.image = image;
+        this.file = file;
+    }
+    return ModelStudio;
+}());
+
+var _a, _b, _c;
+//# sourceMappingURL=studio-add.component.js.map
 
 /***/ }),
 
@@ -2117,8 +2328,14 @@ var DropdownComponent = (function () {
         this.placeholderDrop = "Seleccione una opción";
     }
     DropdownComponent.prototype.ngOnInit = function () {
+        var _this = this;
         console.log("DropdownComponent start");
-        console.log(this.list.length);
+        if (this.list) {
+            this.list.forEach(function (element) {
+                if (element.select)
+                    _this.placeholderDrop = element.view;
+            });
+        }
     };
     DropdownComponent.prototype.select = function (item) {
         this.selectItem.emit(item.value);
@@ -2144,10 +2361,11 @@ DropdownComponent = __decorate([
 ], DropdownComponent);
 
 var Select_Item = (function () {
-    function Select_Item(id, view, value) {
+    function Select_Item(id, view, value, select) {
         this.id = id;
         this.view = view;
         this.value = value;
+        this.select = select;
     }
     return Select_Item;
 }());

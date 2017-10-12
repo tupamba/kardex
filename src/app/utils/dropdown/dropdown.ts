@@ -17,7 +17,13 @@ export class DropdownComponent implements OnInit {
 
     ngOnInit() { 
         console.log("DropdownComponent start");
-        console.log(this.list.length);
+        if(this.list)
+        {
+            this.list.forEach(element => {
+                if(element.select)
+                this.placeholderDrop = element.view;
+            });
+        }
     }
     select(item:any)
     {
@@ -29,6 +35,7 @@ export class Select_Item {
     constructor(
         public id: number,
         public view:string,
-        public value: any
+        public value: any,
+        public select:boolean
     ) { }
 }

@@ -20,7 +20,8 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { DropdownComponent } from "./utils/dropdown/dropdown";
-
+import { StudioListComponent } from './studio/list/studio-list.component';
+import { StudioAddComponent } from './studio/studio-add.component';
 import { PatientFindComponent } from './patient/find/patient-find.component';
 import { PatientListComponent } from './patient/list/patient-list.component';
 import { PatientEditComponent } from './patient/edit/patient-edit.component';
@@ -56,6 +57,8 @@ export const firebaseConfig = {
     PatientAddComponent,
     PatientListComponent,
     PatientEditComponent,
+    StudioAddComponent,
+    StudioListComponent,
     EntryAddComponent,
     PatientFindComponent,
     DropdownComponent

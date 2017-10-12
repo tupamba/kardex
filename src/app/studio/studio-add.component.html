@@ -1,0 +1,60 @@
+<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="gray">
+                        <h4 class="title">Nuevo estudio</h4>
+                        <p class="category">Datos del estudio</p>
+                    </div>
+                    <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Esutdio</label>
+                                        <dropdown-generic [listDrop]='studios' (selectItem)="handleSelectStudio($event)"></dropdown-generic>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Fecha del estudio</label>
+                                        <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" placeholder="Ingrese la fecha" id="date"
+                                            required [(ngModel)]="studioOut.date" name="date"></my-date-picker>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Subir estudio</label>
+                                        <form ngNoForm>
+                                            <label for="upload-photo">Cargar estudio <i class="fa fa-hand-o-up" aria-hidden="true"></i></label>
+                                            <input type="file" (change)="fileChange($event)" placeholder="Subir archivo" id="upload-photo">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="urlImg && urlImg != ''">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating">
+                                        <img [src]='urlImg' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-black">
+                                    <div class="col-md-12">
+                                        <label class="control-label">Descripción</label>
+                                        <textarea class="form-control danger" placeholder="Observaciones..." id="description" [(ngModel)]="studioOut.description" name="description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <button type="submit" class="btn btn-success" [disabled]="!patientForm.form.valid">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

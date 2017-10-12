@@ -23,9 +23,9 @@ export class EntryAddComponent implements OnInit {
 
   ngOnInit() {
     this.beds = [
-      { id: 1,value : {number:1, Room:{number:1,floor:1}},view: 'Cama 1' },
-      { id: 2, value : {number:2, Room:{number:1,floor:1}}, view : 'Cama 2'},
-      { id: 3, value : {number:3, Room:{number:1,floor:1}}, view : 'Cama 3'}
+      { id: 1,value : {number:1, Room:{number:1,floor:1}},view: 'Cama 1', select:false },
+      { id: 2, value : {number:2, Room:{number:1,floor:1}}, view : 'Cama 2', select:false },
+      { id: 3, value : {number:3, Room:{number:1,floor:1}}, view : 'Cama 3', select:false }
     ];
   }
   onChange() {

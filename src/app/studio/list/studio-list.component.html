@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div>
+                    <h4 class="title">Lista de estudios</h4>
+                </div>
+                <div class="card-content table-responsive">
+                    <table class="table">
+                        <thead class="text-danger">
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Fecha</th>
+                                <th>Descripción</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of listStudio">
+                                <td>{{getType(item.type)}}</td>
+                                <td>{{item.date.formatted | date:'dd-MM-yyyy'}}</td>
+                                <td>{{item.description}}</td>
+                                <td><a (click)="getImage(item.image)">Ver estudio</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="urlImg && urlImg != ''">
+            <div class="col-md-12">
+                    <span class="col-md-offset-10 col-md-2"><a (click)="urlImg = ''">Cerrar <i class="fa fa-window-close" aria-hidden="true"></i></a></span>
+                <div class="form-group form-black label-floating">
+                    <img [src]='urlImg' />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<div>
+<div class="main-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -11,8 +11,8 @@
                         Paciente ingresado correctamente.
                     </div>
                     <div *ngIf="submitResult && submitResult == 'error'" class="alert alert-success">
-                            No se pudo ingresar el paciente..
-                        </div>
+                        No se pudo ingresar el paciente..
+                    </div>
                     <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
                         <div class="card-content">
                             <div class="row">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <div class="form-group form-black label-floating">
                                         <label class="control-label">Fecha nacimiento</label>
                                         <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" placeholder="Ingrese la fecha" id="birthDate"
@@ -50,29 +50,27 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="form-black">
-                                        <label class="control-label">Estudio instestinal.</label>
-                                        <textarea class="form-control danger" placeholder="Observaciones..." id="intestinalTest" [(ngModel)]="model.intestinalTest"
-                                            name="intestinalTest"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
                                     <div class="form-group form-black label-floating">
-                                        <form ngNoForm>
-                                            <label for="upload-photo">Cargar estudio <i class="fa fa-hand-o-up" aria-hidden="true"></i></label>
-                                            <input type="file" (change)="fileChange($event)" placeholder="Upload file" id="upload-photo">
-                                        </form>
+                                        <a href="" (click)="viewStudio = !viewStudio" class="dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>Agregar estudio
+                                            </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" *ngIf="urlImg && urlImg != ''">
+                            <div class="row" *ngIf="viewStudio">
                                 <div class="col-md-12">
                                     <div class="form-group form-black label-floating">
-                                        <img [src]='urlImg' />
-                                        <!-- <a (click)="uploadFile()">Subir <i class="fa fa-upload" aria-hidden="true"></i></a> -->
+                                        <app-studio-add (studio)="handleStudio($event)"></app-studio-add>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row" *ngIf="studios && studios.length > 0">
+                                    <div class="col-md-12">
+                                        <div class="form-group form-black label-floating">
+                                            <app-studio-list [Document]="model.document" [ListStudio]="studios"></app-studio-list>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-black label-floating">

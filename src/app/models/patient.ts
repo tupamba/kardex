@@ -81,7 +81,7 @@ export class Patient {
         public personalHistory: any,
         public rejections:any,
         public preferens:any,
-        public intestinalTest: any
+        public studios: Studio[]
     ) {
         
     }
@@ -89,14 +89,14 @@ export class Patient {
 }
 export class Studio {
     constructor(
-        public type: string,
-        public date: Date,
-        public description: string
+        public type: StudioType,
+        public date: string,
+        public description: string,
+        public image:string
     ) { }
 }
-export enum IntestinalTest {
-    Normal,
-    Bad
+export enum StudioType {
+    Instestinal
 }
 export class AppSettings {
     public static MOCK = false;
