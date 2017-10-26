@@ -1,0 +1,37 @@
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Controles</h4>
+                        <p class="category"></p>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-danger">
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Altura</th>
+                                    <th>Peso</th>
+                                    <th>Imc</th>
+                                    <th>Apetito</th>
+                                    <th>Observaciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of listControls">
+                                    <td>{{item.date.formatted | date:'dd-MM-yyyy'}}</td>  
+                                    <td>{{item.size}}</td>
+                                    <td>{{item.weight}}</td>
+                                    <td>{{item.imc}}</td>
+                                    <td *ngIf="item.appetite">Si</td> <td *ngIf="!item.appetite">No</td>
+                                    <td>{{item.observation}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

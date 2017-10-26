@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
+import {BusyModule} from 'angular2-busy';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
@@ -26,12 +29,17 @@ import { PatientFindComponent } from './patient/find/patient-find.component';
 import { PatientListComponent } from './patient/list/patient-list.component';
 import { PatientEditComponent } from './patient/edit/patient-edit.component';
 import { PatientAddComponent } from './patient/add/patient-add.component';
+import { PatientControlComponent } from './patient/control/patient-control.component';
+import { ControlListComponent } from './patient/control/list/control-list.component';
 import { EntryAddComponent } from "./entry/add/entry-add.component";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { EntryService } from "./service/entry.service";
 import { PatientService } from "./service/patient.service";
+import { UtilsService } from "./service/utils.service";
 import { MediaService } from "./service/media.service";
+import { MessageComponent } from './utils/PopUp/message';
+import { DialogMessageComponent } from './utils/PopUp/dialogmessage';
 
 
 export const firebaseConfig = {
@@ -57,25 +65,32 @@ export const firebaseConfig = {
     PatientAddComponent,
     PatientListComponent,
     PatientEditComponent,
+    PatientControlComponent,
+    ControlListComponent,
     StudioAddComponent,
     StudioListComponent,
     EntryAddComponent,
     PatientFindComponent,
-    DropdownComponent
-
+    DropdownComponent,
+    MessageComponent,
+    DialogMessageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    MyDatePickerModule
+    MyDatePickerModule,
+    BrowserAnimationsModule,
+    BootstrapModalModule
   ],
-  providers: [EntryService,PatientService,MediaService],
+  entryComponents: [ MessageComponent,DialogMessageComponent ],
+  providers: [EntryService,PatientService,MediaService,UtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

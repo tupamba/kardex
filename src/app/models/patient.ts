@@ -27,11 +27,12 @@ export class Entry {
 }
 export class Control {
     constructor(
-        public date: Date,
-        public profesional: string,
+        public date: string,
         public weight: Number,
+        public size,
         public imc: Number,
-        public appetite: boolean
+        public appetite: boolean,
+        public observation:string
     ) { }
 }
 export class Observation {
@@ -73,6 +74,7 @@ export class NutritionistPrescription {
 }
 export class Patient {
     constructor(
+        public id:string,
         public firstName: string,
         public lastName: string,
         public document:string,
@@ -81,7 +83,8 @@ export class Patient {
         public personalHistory: any,
         public rejections:any,
         public preferens:any,
-        public studios: Studio[]
+        public studios: Studio[],
+        public controls:Control[]
     ) {
         
     }

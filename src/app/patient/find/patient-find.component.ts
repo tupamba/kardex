@@ -3,21 +3,25 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Patient } from "../../models/patient";
 import { PatientService } from "../../service/patient.service";
 import { Observable } from "rxjs/Rx";
-
+import { MessageComponent } from '../../utils/PopUp/message';
+import { DialogService } from "ng2-bootstrap-modal";
+import { UtilsService } from "../../service/utils.service";
 @Component({
   selector: 'patient-find',
   templateUrl: './patient-find.component.html',
   exportAs: 'patientfind'
 })
 export class PatientFindComponent {
-  listPatients: any[];
+  disposable: any;
+  listPatients: any;
   @Output("selectPatient")
   selPatient = new EventEmitter();
   @Input("document")
   doc: string;
   @Input("name")
   name: string;
-  constructor(private _route: ActivatedRoute, private _service: PatientService) { }
+  constructor(private _route: ActivatedRoute, private _service: PatientService,
+    private dialogService:DialogService,private util:UtilsService) { }
 
   ngOnInit() {
     this.search();
@@ -39,16 +43,22 @@ export class PatientFindComponent {
         }
       );
     else if (this.doc && this.doc != "")
-      this._service.getPatientsforDocument(this.doc).subscribe(
+    {
+      this.showMessage();
+       this._service.getPatientsforDocument(this.doc).subscribe(
         result => {
-          console.log(result);
-          this.listPatients = result;
+          this.disposable.unsubscribe();
+          console.log("ok " + result);
+          this.listPatients = this.util.parsePatient(result);
+        
         },
         error => {
+          this.disposable.unsubscribe();
           console.log("error " + error);
           this.listPatients = [];
         }
       );
+    }
     else
       this._service.getPatients().subscribe(
         result => {
@@ -63,5 +73,23 @@ export class PatientFindComponent {
       );
 
   }
+  showMessage() {
+    this.disposable =  this.dialogService.addDialog(MessageComponent, {
+        title:'Aguarde', 
+        message:'Procesando ...'})
+        .subscribe((isConfirmed)=>{
+            //We get dialog result
+            if(isConfirmed) {
+                alert('accepted');
+            }
+            else {
+                alert('declined');
+            }
+        });
+
+    // setTimeout(()=>{
+    //     this.disposable.unsubscribe();
+    // },5000);
+}
 
 }

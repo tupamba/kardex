@@ -1,0 +1,65 @@
+<div class="container-child-fluid container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="gray">
+                        <h4 class="title">Nuevo control</h4>
+                        <p class="category">Datos del control</p>
+                    </div>
+                    <div *ngIf="submitResult && submitResult == 'ok'" class="alert alert-success">
+                        Control ingresado correctamente.
+                    </div>
+                    <div *ngIf="submitResult && submitResult == 'error'" class="alert alert-success">
+                        No se pudo ingresar el control..
+                    </div>
+                    <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Peso</label>
+                                        <input type="number" class="form-control" id="weight" required [(ngModel)]="control.weight" name="weight">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Talla</label>
+                                        <input type="text" class="form-control" id="size" required [(ngModel)]="control.size" name="size">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">IMC</label>
+                                        <input type="text" class="form-control" id="icm" required [(ngModel)]="control.icm" name="icm">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group form-black label-floating">
+                                        <div class="checkbox">
+                                            <label>
+                                               <input [checked]="control.appetite" (change)="control.appetite = !control.appetite" type="checkbox"> Apetito
+                                              </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group form-black label-floating">
+                                        <label class="control-label">Fecha</label>
+                                        <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" placeholder="Ingrese la fecha" id="date"
+                                            required [(ngModel)]="control.date" name="date"></my-date-picker>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <button type="submit" class="btn btn-success" [disabled]="!patientForm.form.valid">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -14,9 +14,8 @@ import { PatientAddComponent } from '../../patient/add/patient-add.component';
 export class EntryAddComponent implements OnInit {
   optionsModel: number[];
   beds: Select_Item[];
-  viewFind: boolean = false;
   newEntry: Entry = new Entry(new Date(), null, null, null, null, null, null, null, null, null, "");
-  patient:Patient = new Patient("","","",null,"",null,null,null,null);
+  patient:Patient = new Patient("","","","",null,"",null,null,null,null, null);
   myDatePickerOptions: any;
   @ViewChild('patientSearch') elementSearch;
   constructor(private _route: ActivatedRoute, private _service: EntryService) { }
@@ -38,16 +37,11 @@ export class EntryAddComponent implements OnInit {
     console.log(event.lastName);
     this.newEntry.user = event;
     this.patient = this.newEntry.user;
-    this.viewFind = false;
   }
   handleSelectBed(event)
   {
     console.log(event.number);
    
   }
-  searchPatient()
-  {
-    this.viewFind = true;
-    this.elementSearch.search();
-  }
+
 }

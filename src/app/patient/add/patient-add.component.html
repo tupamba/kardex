@@ -36,14 +36,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-md-3">
                                     <div class="form-group form-black label-floating">
                                         <label class="control-label">Fecha nacimiento</label>
                                         <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" placeholder="Ingrese la fecha" id="birthDate"
                                             required [(ngModel)]="model.birthDate" name="birthDate"></my-date-picker>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group form-black label-floating">
                                         <label class="control-label">Ingresar Sexo.</label>
                                         <dropdown-generic [listDrop]='sexs' (selectItem)="handleSelectSex($event)"></dropdown-generic>
@@ -52,8 +52,29 @@
                                 <div class="col-md-3">
                                     <div class="form-group form-black label-floating">
                                         <a href="" (click)="viewStudio = !viewStudio" class="dropdown-toggle" data-toggle="dropdown">
-                                                <i class="fa fa-plus-square" aria-hidden="true"></i>Agregar estudio
+                                                    <i [ngClass]="{'fa-plus-square':!viewStudio,'fa-minus-circle':viewStudio}" class="fa" aria-hidden="true"></i>Agregar estudio
+                                                </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group form-black label-floating">
+                                        <a href="" (click)="viewControl = !viewControl" class="dropdown-toggle" data-toggle="dropdown">
+                                                <i [ngClass]="{'fa-plus-square':!viewControl,'fa-minus-circle':viewControl}" class="fa" aria-hidden="true"></i>Agregar control
                                             </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="viewControl">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating">
+                                        <app-patient-control (controlOut)="handleControl($event)"></app-patient-control>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="controls && controls.length > 0">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating">
+                                        <app-control-list [ListControls]="controls"></app-control-list>
                                     </div>
                                 </div>
                             </div>
@@ -65,12 +86,12 @@
                                 </div>
                             </div>
                             <div class="row" *ngIf="studios && studios.length > 0">
-                                    <div class="col-md-12">
-                                        <div class="form-group form-black label-floating">
-                                            <app-studio-list [Document]="model.document" [ListStudio]="studios"></app-studio-list>
-                                        </div>
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating">
+                                        <app-studio-list [Document]="model.document" [ListStudio]="studios"></app-studio-list>
                                     </div>
                                 </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-black label-floating">
@@ -85,6 +106,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-black label-floating">
+                                            <label class="control-label">Antecedentes Personales</label>
+                                            <textarea class="form-control danger" id="personalHistory" [(ngModel)]="model.personalHistory" name="personalHistory"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="clearfix"></div>
                             <button type="submit" class="btn btn-success" [disabled]="!patientForm.form.valid">Agregar</button>
                         </div>

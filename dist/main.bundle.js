@@ -81,12 +81,12 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["Location"]) === "function" && _a || Object])
 ], AppComponent);
 
 var _a;
@@ -101,41 +101,58 @@ var _a;
 /* unused harmony export firebaseConfig */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__("../../../../../src/app/components/components.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_mydatepicker_src_my_date_picker_my_date_picker_module__ = __webpack_require__("../../../../mydatepicker/src/my-date-picker/my-date-picker.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__user_profile_user_profile_component__ = __webpack_require__("../../../../../src/app/user-profile/user-profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__table_list_table_list_component__ = __webpack_require__("../../../../../src/app/table-list/table-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__typography_typography_component__ = __webpack_require__("../../../../../src/app/typography/typography.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__icons_icons_component__ = __webpack_require__("../../../../../src/app/icons/icons.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__maps_maps_component__ = __webpack_require__("../../../../../src/app/maps/maps.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__notifications_notifications_component__ = __webpack_require__("../../../../../src/app/notifications/notifications.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__upgrade_upgrade_component__ = __webpack_require__("../../../../../src/app/upgrade/upgrade.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__utils_dropdown_dropdown__ = __webpack_require__("../../../../../src/app/utils/dropdown/dropdown.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__studio_list_studio_list_component__ = __webpack_require__("../../../../../src/app/studio/list/studio-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__studio_studio_add_component__ = __webpack_require__("../../../../../src/app/studio/studio-add.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__patient_find_patient_find_component__ = __webpack_require__("../../../../../src/app/patient/find/patient-find.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__patient_list_patient_list_component__ = __webpack_require__("../../../../../src/app/patient/list/patient-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__patient_edit_patient_edit_component__ = __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__patient_add_patient_add_component__ = __webpack_require__("../../../../../src/app/patient/add/patient-add.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__entry_add_entry_add_component__ = __webpack_require__("../../../../../src/app/entry/add/entry-add.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__service_entry_service__ = __webpack_require__("../../../../../src/app/service/entry.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_bootstrap_modal__ = __webpack_require__("../../../../ng2-bootstrap-modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_bootstrap_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_bootstrap_modal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_components_module__ = __webpack_require__("../../../../../src/app/components/components.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_mydatepicker_src_my_date_picker_my_date_picker_module__ = __webpack_require__("../../../../mydatepicker/src/my-date-picker/my-date-picker.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__user_profile_user_profile_component__ = __webpack_require__("../../../../../src/app/user-profile/user-profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__table_list_table_list_component__ = __webpack_require__("../../../../../src/app/table-list/table-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__typography_typography_component__ = __webpack_require__("../../../../../src/app/typography/typography.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__icons_icons_component__ = __webpack_require__("../../../../../src/app/icons/icons.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__maps_maps_component__ = __webpack_require__("../../../../../src/app/maps/maps.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__notifications_notifications_component__ = __webpack_require__("../../../../../src/app/notifications/notifications.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__upgrade_upgrade_component__ = __webpack_require__("../../../../../src/app/upgrade/upgrade.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__utils_dropdown_dropdown__ = __webpack_require__("../../../../../src/app/utils/dropdown/dropdown.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__studio_list_studio_list_component__ = __webpack_require__("../../../../../src/app/studio/list/studio-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__studio_studio_add_component__ = __webpack_require__("../../../../../src/app/studio/studio-add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__patient_find_patient_find_component__ = __webpack_require__("../../../../../src/app/patient/find/patient-find.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__patient_list_patient_list_component__ = __webpack_require__("../../../../../src/app/patient/list/patient-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__patient_edit_patient_edit_component__ = __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__patient_add_patient_add_component__ = __webpack_require__("../../../../../src/app/patient/add/patient-add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__patient_control_patient_control_component__ = __webpack_require__("../../../../../src/app/patient/control/patient-control.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__patient_control_list_control_list_component__ = __webpack_require__("../../../../../src/app/patient/control/list/control-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__entry_add_entry_add_component__ = __webpack_require__("../../../../../src/app/entry/add/entry-add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__service_entry_service__ = __webpack_require__("../../../../../src/app/service/entry.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__service_utils_service__ = __webpack_require__("../../../../../src/app/service/utils.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__utils_PopUp_message__ = __webpack_require__("../../../../../src/app/utils/PopUp/message.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__utils_PopUp_dialogmessage__ = __webpack_require__("../../../../../src/app/utils/PopUp/dialogmessage.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+
 
 
 
@@ -180,39 +197,47 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__user_profile_user_profile_component__["a" /* UserProfileComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__table_list_table_list_component__["a" /* TableListComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__typography_typography_component__["a" /* TypographyComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__icons_icons_component__["a" /* IconsComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__maps_maps_component__["a" /* MapsComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__notifications_notifications_component__["a" /* NotificationsComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__upgrade_upgrade_component__["a" /* UpgradeComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__patient_add_patient_add_component__["a" /* PatientAddComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__patient_list_patient_list_component__["a" /* PatientListComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__patient_edit_patient_edit_component__["a" /* PatientEditComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__studio_studio_add_component__["a" /* StudioAddComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__studio_list_studio_list_component__["a" /* StudioListComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__entry_add_entry_add_component__["a" /* EntryAddComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__patient_find_patient_find_component__["a" /* PatientFindComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__utils_dropdown_dropdown__["a" /* DropdownComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__user_profile_user_profile_component__["a" /* UserProfileComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__table_list_table_list_component__["a" /* TableListComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__typography_typography_component__["a" /* TypographyComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__icons_icons_component__["a" /* IconsComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__maps_maps_component__["a" /* MapsComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__notifications_notifications_component__["a" /* NotificationsComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__upgrade_upgrade_component__["a" /* UpgradeComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__patient_add_patient_add_component__["a" /* PatientAddComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__patient_list_patient_list_component__["a" /* PatientListComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__patient_edit_patient_edit_component__["a" /* PatientEditComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__patient_control_patient_control_component__["a" /* PatientControlComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__patient_control_list_control_list_component__["a" /* ControlListComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__studio_studio_add_component__["a" /* StudioAddComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__studio_list_studio_list_component__["a" /* StudioListComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__entry_add_entry_add_component__["a" /* EntryAddComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__patient_find_patient_find_component__["a" /* PatientFindComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__utils_dropdown_dropdown__["a" /* DropdownComponent */],
+            __WEBPACK_IMPORTED_MODULE_36__utils_PopUp_message__["a" /* MessageComponent */],
+            __WEBPACK_IMPORTED_MODULE_37__utils_PopUp_dialogmessage__["a" /* DialogMessageComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* ComponentsModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */],
-            __WEBPACK_IMPORTED_MODULE_5__app_routing__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_25_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
-            __WEBPACK_IMPORTED_MODULE_26_angularfire2_database__["b" /* AngularFireDatabaseModule */],
-            __WEBPACK_IMPORTED_MODULE_8_mydatepicker_src_my_date_picker_my_date_picker_module__["a" /* MyDatePickerModule */]
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_9__components_components_module__["a" /* ComponentsModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_router__["c" /* RouterModule */],
+            __WEBPACK_IMPORTED_MODULE_8__app_routing__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_30_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+            __WEBPACK_IMPORTED_MODULE_31_angularfire2_database__["b" /* AngularFireDatabaseModule */],
+            __WEBPACK_IMPORTED_MODULE_11_mydatepicker_src_my_date_picker_my_date_picker_module__["a" /* MyDatePickerModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_7_ng2_bootstrap_modal__["BootstrapModalModule"]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_27__service_entry_service__["a" /* EntryService */], __WEBPACK_IMPORTED_MODULE_28__service_patient_service__["a" /* PatientService */], __WEBPACK_IMPORTED_MODULE_29__service_media_service__["a" /* MediaService */]],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
+        entryComponents: [__WEBPACK_IMPORTED_MODULE_36__utils_PopUp_message__["a" /* MessageComponent */], __WEBPACK_IMPORTED_MODULE_37__utils_PopUp_dialogmessage__["a" /* DialogMessageComponent */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_32__service_entry_service__["a" /* EntryService */], __WEBPACK_IMPORTED_MODULE_33__service_patient_service__["a" /* PatientService */], __WEBPACK_IMPORTED_MODULE_35__service_media_service__["a" /* MediaService */], __WEBPACK_IMPORTED_MODULE_34__service_utils_service__["a" /* UtilsService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -278,9 +303,9 @@ var AppRoutingModule = (function () {
     return AppRoutingModule;
 }());
 AppRoutingModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */].forRoot(routes)
         ],
@@ -321,9 +346,9 @@ var ComponentsModule = (function () {
     return ComponentsModule;
 }());
 ComponentsModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */],
         ],
         declarations: [
@@ -393,7 +418,7 @@ var FooterComponent = (function () {
     return FooterComponent;
 }());
 FooterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-footer',
         template: __webpack_require__("../../../../../src/app/components/footer/footer.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/footer/footer.component.css")]
@@ -505,12 +530,12 @@ var NavbarComponent = (function () {
     return NavbarComponent;
 }());
 NavbarComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-navbar',
         template: __webpack_require__("../../../../../src/app/components/navbar/navbar.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/navbar/navbar.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object])
 ], NavbarComponent);
 
 var _a, _b;
@@ -587,7 +612,7 @@ var SidebarComponent = (function () {
     return SidebarComponent;
 }());
 SidebarComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-sidebar',
         template: __webpack_require__("../../../../../src/app/components/sidebar/sidebar.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/sidebar/sidebar.component.css")]
@@ -769,7 +794,7 @@ var DashboardComponent = (function () {
     return DashboardComponent;
 }());
 DashboardComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-dashboard',
         template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
         styles: [__webpack_require__("../../../../../src/app/dashboard/dashboard.component.css")]
@@ -784,7 +809,7 @@ DashboardComponent = __decorate([
 /***/ "../../../../../src/app/entry/add/entry-add.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-10\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo ingreso</h4>\n                        <p class=\"category\">Datos del ingreso</p>\n                    </div>\n                    <div class=\"card-content\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Fecha de ingreso</label>\n                                    <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" [selDate]=\"newEntry.dateEntry\" placeholder=\"Ingrese la fecha\"></my-date-picker>\n                                </div>\n                            </div>\n                            <div class=\"col-md-6\">\n                                <dropdown-generic [listDrop]='beds' (selectItem)=\"handleSelectBed($event)\"></dropdown-generic>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black\">\n                                    <label class=\"control-label\">Paciente</label>\n                                    <div>\n                                        <div class=\"col-md-3\">\n                                            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"patient.firstName\" placeholder=\"Ingrese el nombre ...\">\n                                        </div>\n                                        <div class=\"col-md-3\">\n                                                <input type=\"text\" class=\"form-control\" [(ngModel)]=\"patient.lastName\" placeholder=\"Ingrese el apellido ...\">\n                                            </div>\n                                        <div class=\"col-md-3\">\n                                            <input type=\"text\" class=\"form-control\" [(ngModel)]='patient.document' placeholder=\"Ingrese el documento ...\">\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" (click)=\"searchPatient()\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i class=\"fa fa-search\" aria-hidden=\"true\"></i>\n                                                </a>\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" (click)=\"viewAdd = true\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>\n                                                </a>\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" *ngIf=\"this.newEntry.user\" (click)=\"viewPerfil = true\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n                                                    </a>\n                                        </div>\n                                        <div class=\"col-md-12\" *ngIf=\"viewFind\">\n                                            <span class=\"col-md-offset-10 col-md-2\"><a (click)=\"viewFind = false\">Cerrar <i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></a></span>\n                                            <patient-find #patientSearch=\"patientfind\" [document]=\"patient.document\" [name]=\"patient.firstName\" (selectPatient)=\"handleSelectPatient($event)\"></patient-find>\n                                        </div>\n                                        <div class=\"col-md-12\" *ngIf=\"viewAdd\">\n                                            <span class=\"col-md-offset-10 col-md-2\"><a (click)=\"viewAdd = false\">Cerrar <i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></a></span>\n                                            <app-patient-add></app-patient-add>\n                                        </div>\n                                        <div class=\"col-md-12\" *ngIf=\"viewPerfil\">\n                                            <span class=\"col-md-offset-10 col-md-2\"><a (click)=\"viewPerfil = false\">Cerrar <i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></a></span>\n                                            <app-patient-edit  [patient]=\"patient\"></app-patient-edit>\n                                        </div>\n                                    </div>\n\n                                </div>\n\n                            </div>\n                        </div>\n\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"clearfix\"></div>\n                        <button class=\"btn btn-success\">Agregar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-10\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo ingreso</h4>\n                        <p class=\"category\">Datos del ingreso</p>\n                    </div>\n                    <div class=\"card-content\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Fecha de ingreso</label>\n                                    <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" [selDate]=\"newEntry.dateEntry\" placeholder=\"Ingrese la fecha\"></my-date-picker>\n                                </div>\n                            </div>\n                            <div class=\"col-md-6\">\n                                <dropdown-generic [listDrop]='beds' (selectItem)=\"handleSelectBed($event)\"></dropdown-generic>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black\">\n                                    <label class=\"control-label\">Paciente</label>\n                                    <div>\n                                        <div class=\"col-md-3\">\n                                            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"patient.firstName\" placeholder=\"Ingrese el nombre ...\">\n                                        </div>\n                                        <div class=\"col-md-3\">\n                                                <input type=\"text\" class=\"form-control\" [(ngModel)]=\"patient.lastName\" placeholder=\"Ingrese el apellido ...\">\n                                            </div>\n                                        <div class=\"col-md-3\">\n                                            <input type=\"text\" class=\"form-control\" [(ngModel)]='patient.document' placeholder=\"Ingrese el documento ...\">\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" (click)=\"viewFind = true\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i class=\"fa fa-search\" aria-hidden=\"true\"></i>\n                                                </a>\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" (click)=\"viewAdd = true\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>\n                                                </a>\n                                        </div>\n                                        <div class=\"col-md-1\">\n                                            <a href=\"\" *ngIf=\"this.newEntry.user\" (click)=\"viewPerfil = true\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n                                                    </a>\n                                        </div>\n                                        <div class=\"col-md-12\" *ngIf=\"viewFind\">\n                                            <span class=\"col-md-offset-10 col-md-2\"><a (click)=\"viewFind = false\">Cerrar <i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></a></span>\n                                            <patient-find [document]=\"patient.document\" [name]=\"patient.firstName\" (selectPatient)=\"handleSelectPatient($event)\"></patient-find>\n                                        </div>\n                                        <div class=\"col-md-12\" *ngIf=\"viewAdd\">\n                                            <span class=\"col-md-offset-10 col-md-2\"><a (click)=\"viewAdd = false\">Cerrar <i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></a></span>\n                                            <app-patient-add></app-patient-add>\n                                        </div>\n                                        <div class=\"col-md-12\" *ngIf=\"viewPerfil\">\n                                            <span class=\"col-md-offset-10 col-md-2\"><a (click)=\"viewPerfil = false\">Cerrar <i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></a></span>\n                                            <app-patient-edit  [patient]=\"patient\"></app-patient-edit>\n                                        </div>\n                                    </div>\n\n                                </div>\n\n                            </div>\n                        </div>\n\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Diagnósitco nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el diagnostico\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción medico</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <div class=\"form-group form-black label-floating\">\n                                    <label class=\"control-label\">Prescripción nutricionista</label><br/>\n                                    <textarea class=\"form-control\" placeholder=\"Ingrese el prescripción\"></textarea>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"clearfix\"></div>\n                        <button class=\"btn btn-success\">Agregar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -814,9 +839,8 @@ var EntryAddComponent = (function () {
     function EntryAddComponent(_route, _service) {
         this._route = _route;
         this._service = _service;
-        this.viewFind = false;
-        this.newEntry = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["b" /* Entry */](new Date(), null, null, null, null, null, null, null, null, null, "");
-        this.patient = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */]("", "", "", null, "", null, null, null, null);
+        this.newEntry = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Entry */](new Date(), null, null, null, null, null, null, null, null, null, "");
+        this.patient = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["d" /* Patient */]("", "", "", "", null, "", null, null, null, null, null);
     }
     EntryAddComponent.prototype.ngOnInit = function () {
         this.beds = [
@@ -834,23 +858,18 @@ var EntryAddComponent = (function () {
         console.log(event.lastName);
         this.newEntry.user = event;
         this.patient = this.newEntry.user;
-        this.viewFind = false;
     };
     EntryAddComponent.prototype.handleSelectBed = function (event) {
         console.log(event.number);
     };
-    EntryAddComponent.prototype.searchPatient = function () {
-        this.viewFind = true;
-        this.elementSearch.search();
-    };
     return EntryAddComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('patientSearch'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('patientSearch'),
     __metadata("design:type", Object)
 ], EntryAddComponent.prototype, "elementSearch", void 0);
 EntryAddComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-entry-add',
         template: __webpack_require__("../../../../../src/app/entry/add/entry-add.component.html"),
     }),
@@ -911,7 +930,7 @@ var IconsComponent = (function () {
     return IconsComponent;
 }());
 IconsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-icons',
         template: __webpack_require__("../../../../../src/app/icons/icons.component.html"),
         styles: [__webpack_require__("../../../../../src/app/icons/icons.component.css")]
@@ -1003,7 +1022,7 @@ var MapsComponent = (function () {
     return MapsComponent;
 }());
 MapsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-maps',
         template: __webpack_require__("../../../../../src/app/maps/maps.component.html"),
         styles: [__webpack_require__("../../../../../src/app/maps/maps.component.css")]
@@ -1015,22 +1034,55 @@ MapsComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/models/base-component.view.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseComponentView; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_PopUp_message__ = __webpack_require__("../../../../../src/app/utils/PopUp/message.ts");
+
+var BaseComponentView = (function () {
+    function BaseComponentView(dialogService) {
+        this.dialogService = dialogService;
+    }
+    BaseComponentView.prototype.showWait = function () {
+        return this.dialogService.addDialog(__WEBPACK_IMPORTED_MODULE_0__utils_PopUp_message__["a" /* MessageComponent */], {
+            title: 'Aguarde',
+            message: 'Procesando ...'
+        })
+            .subscribe(function (isConfirmed) {
+            //We get dialog result
+            if (isConfirmed) {
+                console.log("ok");
+            }
+            else {
+                console.log("cancel");
+            }
+        });
+    };
+    return BaseComponentView;
+}());
+
+//# sourceMappingURL=base-component.view.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/models/patient.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export Room */
 /* unused harmony export Bed */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Entry; });
-/* unused harmony export Control */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Entry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Control; });
 /* unused harmony export Observation */
 /* unused harmony export Diagnostic */
 /* unused harmony export DiagnosticNutritionist */
 /* unused harmony export MedicalPrescription */
 /* unused harmony export NutritionistPrescription */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Patient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Patient; });
 /* unused harmony export Studio */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return StudioType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return StudioType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSettings; });
 var Room = (function () {
     function Room(number, floor) {
@@ -1066,12 +1118,13 @@ var Entry = (function () {
 }());
 
 var Control = (function () {
-    function Control(date, profesional, weight, imc, appetite) {
+    function Control(date, weight, size, imc, appetite, observation) {
         this.date = date;
-        this.profesional = profesional;
         this.weight = weight;
+        this.size = size;
         this.imc = imc;
         this.appetite = appetite;
+        this.observation = observation;
     }
     return Control;
 }());
@@ -1124,7 +1177,8 @@ var NutritionistPrescription = (function () {
 }());
 
 var Patient = (function () {
-    function Patient(firstName, lastName, document, birthDate, sex, personalHistory, rejections, preferens, studios) {
+    function Patient(id, firstName, lastName, document, birthDate, sex, personalHistory, rejections, preferens, studios, controls) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.document = document;
@@ -1134,6 +1188,7 @@ var Patient = (function () {
         this.rejections = rejections;
         this.preferens = preferens;
         this.studios = studios;
+        this.controls = controls;
     }
     return Patient;
 }());
@@ -1227,7 +1282,7 @@ var NotificationsComponent = (function () {
     return NotificationsComponent;
 }());
 NotificationsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-notifications',
         template: __webpack_require__("../../../../../src/app/notifications/notifications.component.html"),
         styles: [__webpack_require__("../../../../../src/app/notifications/notifications.component.css")]
@@ -1242,7 +1297,7 @@ NotificationsComponent = __decorate([
 /***/ "../../../../../src/app/patient/add/patient-add.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo paciente</h4>\n                        <p class=\"category\">Datos del paciente</p>\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'ok'\" class=\"alert alert-success\">\n                        Paciente ingresado correctamente.\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'error'\" class=\"alert alert-success\">\n                        No se pudo ingresar el paciente..\n                    </div>\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                        <div class=\"card-content\">\n                            <div class=\"row\">\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Documento</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Nombre</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstname\" name=\"firstname\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Apellido</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastname\" name=\"lastname\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-5\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Fecha nacimiento</label>\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                            required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Ingresar Sexo.</label>\n                                        <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <a href=\"\" (click)=\"viewStudio = !viewStudio\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>Agregar estudio\n                                            </a>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"viewStudio\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <app-studio-add (studio)=\"handleStudio($event)\"></app-studio-add>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"studios && studios.length > 0\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-list [Document]=\"model.document\" [ListStudio]=\"studios\"></app-studio-list>\n                                        </div>\n                                    </div>\n                                </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Preferencias</label>\n                                        <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preference\" name=\"preference\"></textarea>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Rechazos</label>\n                                        <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.reject\" name=\"reject\"></textarea>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"clearfix\"></div>\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Nuevo paciente</h4>\n                        <p class=\"category\">Datos del paciente</p>\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'ok'\" class=\"alert alert-success\">\n                        Paciente ingresado correctamente.\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'error'\" class=\"alert alert-success\">\n                        No se pudo ingresar el paciente..\n                    </div>\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                        <div class=\"card-content\">\n                            <div class=\"row\">\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Documento</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Nombre</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstname\" name=\"firstname\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Apellido</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastname\" name=\"lastname\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Fecha nacimiento</label>\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                            required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Ingresar Sexo.</label>\n                                        <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <a href=\"\" (click)=\"viewStudio = !viewStudio\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i [ngClass]=\"{'fa-plus-square':!viewStudio,'fa-minus-circle':viewStudio}\" class=\"fa\" aria-hidden=\"true\"></i>Agregar estudio\n                                                </a>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <a href=\"\" (click)=\"viewControl = !viewControl\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                <i [ngClass]=\"{'fa-plus-square':!viewControl,'fa-minus-circle':viewControl}\" class=\"fa\" aria-hidden=\"true\"></i>Agregar control\n                                            </a>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"viewControl\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <app-patient-control (controlOut)=\"handleControl($event)\"></app-patient-control>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"controls && controls.length > 0\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <app-control-list [ListControls]=\"controls\"></app-control-list>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"viewStudio\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <app-studio-add (studio)=\"handleStudio($event)\"></app-studio-add>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\" *ngIf=\"studios && studios.length > 0\">\n                                <div class=\"col-md-12\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <app-studio-list [Document]=\"model.document\" [ListStudio]=\"studios\"></app-studio-list>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Preferencias</label>\n                                        <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preference\" name=\"preference\"></textarea>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-black label-floating\">\n                                        <label class=\"control-label\">Rechazos</label>\n                                        <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.reject\" name=\"reject\"></textarea>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Antecedentes Personales</label>\n                                            <textarea class=\"form-control danger\" id=\"personalHistory\" [(ngModel)]=\"model.personalHistory\" name=\"personalHistory\"></textarea>\n                                        </div>\n                                    </div>\n                                </div>\n                            <div class=\"clearfix\"></div>\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1257,6 +1312,20 @@ module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_patient__ = __webpack_require__("../../../../../src/app/models/patient.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_PopUp_dialogmessage__ = __webpack_require__("../../../../../src/app/utils/PopUp/dialogmessage.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_bootstrap_modal__ = __webpack_require__("../../../../ng2-bootstrap-modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_bootstrap_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_bootstrap_modal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_base_component_view__ = __webpack_require__("../../../../../src/app/models/base-component.view.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1271,15 +1340,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var PatientAddComponent = (function () {
-    function PatientAddComponent(_route, _service, _media) {
-        this._route = _route;
-        this._service = _service;
-        this._media = _media;
-        this.viewStudio = false;
-        this.file = new Array();
-        this.folderImage = "images";
-        this.studios = new Array();
+
+
+
+var PatientAddComponent = (function (_super) {
+    __extends(PatientAddComponent, _super);
+    function PatientAddComponent(_route, _service, _media, dialogService) {
+        var _this = _super.call(this, dialogService) || this;
+        _this._route = _route;
+        _this._service = _service;
+        _this._media = _media;
+        _this.dialogService = dialogService;
+        _this.viewStudio = false;
+        _this.viewControl = false;
+        _this.file = new Array();
+        _this.folderImage = "images";
+        _this.studios = new Array();
+        _this.controls = new Array();
+        return _this;
     }
     PatientAddComponent.prototype.ngOnInit = function () {
         console.log("PatientAddComponent");
@@ -1288,20 +1366,39 @@ var PatientAddComponent = (function () {
             { id: 2, value: 'M', view: 'Mujer', select: false },
             { id: 3, value: 'I', view: 'Indefinido', select: false }
         ];
-        this.model = new modelView("", "", "", "", "", "", "", "");
+        this.model = new modelView("", "", "", "", "", "", "", "", "");
     };
     PatientAddComponent.prototype.onSubmit = function () {
         var _this = this;
         console.log("submit");
-        this.currentPatient = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */](this.model.firstname, this.model.lastname, this.model.document, this.model.birthDate, this.model.sex, null, { date: new Date(), data: this.model.reject }, { date: new Date(), data: this.model.preference }, this.studios);
+        this.disposable = this.showWait();
+        this.currentPatient = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["d" /* Patient */]("", this.model.firstname, this.model.lastname, this.model.document, this.model.birthDate, this.model.sex, this.model.personalHistory, { date: new Date(), data: this.model.reject }, { date: new Date(), data: this.model.preference }, this.studios, this.controls);
+        this._service.getPatientsforDocument(this.currentPatient.document).subscribe(function (resul) {
+            var r = JSON.stringify(resul);
+            console.log("Exist " + r);
+            if (r != "{}")
+                _this.showMessage('{"title":"Ya existe un paciente con este documento","css":"alert-danger"}', 'Desea agregar un nuevo paciente?');
+            else
+                _this.addPatient();
+        }, function (error) {
+            console.log("Not exist");
+            _this.addPatient();
+        });
+    };
+    PatientAddComponent.prototype.addPatient = function () {
+        var _this = this;
         this._service.savePatient(this.currentPatient).then(function (result) {
+            _this.disposable.unsubscribe();
             if (_this.file)
                 _this.uploadFile();
             console.log("savePatient ok: " + result);
-            _this.submitResult = "ok";
+            _this.showMessage('{"title":"Paciente agregado correctamente","css":"alert-success"}', 'Desea agregar un nuevo paciente?');
+            //this.submitResult = "ok";
         }, function (error) {
+            _this.disposable.unsubscribe();
             console.log("savePatient error: " + error);
-            _this.submitResult = "ok";
+            _this.showMessage('{"title":"No se pudo agregar el paciente","css":"alert-danger"}', 'Desea agregar un nuevo paciente?');
+            //this.submitResult = "ok";
         });
     };
     PatientAddComponent.prototype.onDateChanged = function (event) {
@@ -1331,18 +1428,37 @@ var PatientAddComponent = (function () {
         console.log(event);
         this.model.sex = event;
     };
+    PatientAddComponent.prototype.handleControl = function (event) {
+        this.controls.push({ date: event.date, appetite: event.appetite, imc: event.imc, size: event.size, weight: event.weight, observation: event.observation });
+        this.viewControl = false;
+    };
+    PatientAddComponent.prototype.showMessage = function (title, body) {
+        var _this = this;
+        return this.dialogService.addDialog(__WEBPACK_IMPORTED_MODULE_5__utils_PopUp_dialogmessage__["a" /* DialogMessageComponent */], {
+            title: title,
+            message: body,
+        }).subscribe(function (isConfirmed) {
+            //We get dialog result
+            if (isConfirmed) {
+                _this.model = new modelView("", "", "", "", "", "", "", "", "");
+            }
+            else {
+                _this._route.navigateByUrl('patient-list');
+            }
+        });
+    };
     return PatientAddComponent;
-}());
+}(__WEBPACK_IMPORTED_MODULE_7__models_base_component_view__["a" /* BaseComponentView */]));
 PatientAddComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-patient-add',
         template: __webpack_require__("../../../../../src/app/patient/add/patient-add.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6_ng2_bootstrap_modal__["DialogService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_ng2_bootstrap_modal__["DialogService"]) === "function" && _d || Object])
 ], PatientAddComponent);
 
 var modelView = (function () {
-    function modelView(firstname, lastname, document, birthDate, sex, intestinalTest, preference, reject) {
+    function modelView(firstname, lastname, document, birthDate, sex, intestinalTest, preference, reject, personalHistory) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.document = document;
@@ -1351,27 +1467,76 @@ var modelView = (function () {
         this.intestinalTest = intestinalTest;
         this.preference = preference;
         this.reject = reject;
+        this.personalHistory = personalHistory;
     }
     return modelView;
 }());
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=patient-add.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/patient/edit/patient-edit.component.html":
+/***/ "../../../../../src/app/patient/control/list/control-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"main-content\">\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card\">\n                        <div class=\"card-header\" data-background-color=\"red\">\n                            <h4 class=\"title\">Paciente</h4>\n                            <p class=\"category\">Datos del paciente</p>\n                        </div>\n                        <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                            <div class=\"card-content\">\n                                <div class=\"row\">\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Documento</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\" readonly>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Nombre</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstName\" name=\"firstname\">\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Apellido</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastName\" name=\"lastname\">\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-5\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Fecha nacimiento</label>\n                                            <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                                required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Ingresar Sexo.</label>\n                                            <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <a href=\"\" (click)=\"viewStudio = !viewStudio\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>Agregar estudio\n                                                    </a>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"viewStudio\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-add (studio)=\"handleStudio($event)\"></app-studio-add>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"model.studios && model.studios.length > 0\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-list [Document]=\"model.document\" [ListStudio]=\"model.studios\"></app-studio-list>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Preferencias</label>\n                                            <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preferens.data\" name=\"preference\"></textarea>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Rechazos</label>\n                                            <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.rejections.data\" name=\"reject\"></textarea>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <button type=\"button\" class=\"btn\">Historial</button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"clearfix\"></div>\n                                <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Modificar</button>\n                            </div>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Controles</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Fecha</th>\n                                    <th>Altura</th>\n                                    <th>Peso</th>\n                                    <th>Imc</th>\n                                    <th>Apetito</th>\n                                    <th>Observaciones</th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listControls\">\n                                    <td>{{item.date.formatted | date:'dd-MM-yyyy'}}</td>  \n                                    <td>{{item.size}}</td>\n                                    <td>{{item.weight}}</td>\n                                    <td>{{item.imc}}</td>\n                                    <td *ngIf=\"item.appetite\">Si</td> <td *ngIf=\"!item.appetite\">No</td>\n                                    <td>{{item.observation}}</td>\n                                </tr>\n                            </tbody>\n                        </table>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/patient/edit/patient-edit.component.ts":
+/***/ "../../../../../src/app/patient/control/list/control-list.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientEditComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ControlListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ControlListComponent = (function () {
+    function ControlListComponent() {
+        this.listControls = new Array();
+    }
+    ControlListComponent.prototype.ngOnInit = function () {
+        console.log("ngOnInit");
+    };
+    return ControlListComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])("ListControls"),
+    __metadata("design:type", Object)
+], ControlListComponent.prototype, "listControls", void 0);
+ControlListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-control-list',
+        template: __webpack_require__("../../../../../src/app/patient/control/list/control-list.component.html")
+    }),
+    __metadata("design:paramtypes", [])
+], ControlListComponent);
+
+//# sourceMappingURL=control-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/patient/control/patient-control.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-child-fluid container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"gray\">\n                        <h4 class=\"title\">Nuevo control</h4>\n                        <p class=\"category\">Datos del control</p>\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'ok'\" class=\"alert alert-success\">\n                        Control ingresado correctamente.\n                    </div>\n                    <div *ngIf=\"submitResult && submitResult == 'error'\" class=\"alert alert-success\">\n                        No se pudo ingresar el control..\n                    </div>\n                    <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                        <div class=\"card-content\">\n                            <div class=\"row\">\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Peso</label>\n                                        <input type=\"number\" class=\"form-control\" id=\"weight\" required [(ngModel)]=\"control.weight\" name=\"weight\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Talla</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"size\" required [(ngModel)]=\"control.size\" name=\"size\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">IMC</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"icm\" required [(ngModel)]=\"control.icm\" name=\"icm\">\n                                    </div>\n                                </div>\n                                <div class=\"col-md-3\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <div class=\"checkbox\">\n                                            <label>\n                                               <input [checked]=\"control.appetite\" (change)=\"control.appetite = !control.appetite\" type=\"checkbox\"> Apetito\n                                              </label>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"row\">\n                                <div class=\"col-md-4\">\n                                    <div class=\"form-group form-black label-floating\">\n                                        <label class=\"control-label\">Fecha</label>\n                                        <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"date\"\n                                            required [(ngModel)]=\"control.date\" name=\"date\"></my-date-picker>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-8\">\n\n                                </div>\n                            </div>\n                            <div class=\"clearfix\"></div>\n                            <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Agregar</button>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/patient/control/patient-control.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientControlComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_patient__ = __webpack_require__("../../../../../src/app/models/patient.ts");
@@ -1391,84 +1556,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var PatientEditComponent = (function () {
-    function PatientEditComponent(_route, _service, _media) {
+var PatientControlComponent = (function () {
+    function PatientControlComponent(_route, _service, _media) {
         this._route = _route;
         this._service = _service;
         this._media = _media;
-        this.viewStudio = false;
-        this.file = new Array();
-        this.folderImage = "images";
+        this.control = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["b" /* Control */]("", 0, 0, 0, false, "");
+        this.sendControl = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
-    PatientEditComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        console.log("PatientEditComponent start");
-        this.sexs = [
-            { id: 1, value: 'H', view: 'Hombre', select: false },
-            { id: 2, value: 'M', view: 'Mujer', select: false },
-            { id: 3, value: 'I', view: 'Indefinido', select: false }
-        ];
-        if (this.patient) {
-            this.model = this.patient;
-        }
-        else {
-            this.listPatients = this._service.getCurrentPatients();
-            this._route.params.forEach(function (params) {
-                var id = params['id'];
-                _this.model = _this.listPatients.find(function (x) { return x.document == id; });
-            });
-        }
-        var s = this.sexs.find(function (x) { return _this.model.sex == x.value; });
-        if (s)
-            s.select = true;
+    PatientControlComponent.prototype.ngOnInit = function () {
+        console.log("PatientAddComponent");
     };
-    PatientEditComponent.prototype.uploadFile = function () {
-        var _this = this;
-        console.log("uploadFile ");
-        this.file.forEach(function (element) {
-            _this._media.upload(element, _this.model.document);
-        });
+    PatientControlComponent.prototype.onSubmit = function () {
+        console.log("submit");
+        this.sendControl.emit(this.control);
     };
-    PatientEditComponent.prototype.handleStudio = function (event) {
-        this.model.studios.push({ date: event.date, description: event.description, image: event.image, type: event.type });
-        this.file.push(event.file);
-        this.viewStudio = false;
+    PatientControlComponent.prototype.onDateChanged = function (event) {
+        this.control.date = event;
     };
-    return PatientEditComponent;
+    return PatientControlComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("patient"),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_patient__["c" /* Patient */]) === "function" && _a || Object)
-], PatientEditComponent.prototype, "patient", void 0);
-PatientEditComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-patient-edit',
-        template: __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.html"),
-        exportAs: 'patientedit'
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('controlOut'),
+    __metadata("design:type", Object)
+], PatientControlComponent.prototype, "sendControl", void 0);
+PatientControlComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-patient-control',
+        template: __webpack_require__("../../../../../src/app/patient/control/patient-control.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */]) === "function" && _d || Object])
-], PatientEditComponent);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_media_service__["a" /* MediaService */]) === "function" && _c || Object])
+], PatientControlComponent);
 
-var _a, _b, _c, _d;
-//# sourceMappingURL=patient-edit.component.js.map
+var _a, _b, _c;
+//# sourceMappingURL=patient-control.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/patient/find/patient-find.component.html":
+/***/ "../../../../../src/app/patient/edit/patient-edit.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Buscar pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <div *ngIf=\"!listPatients || listPatients.length == 0\">\n                            <label class=\"label label-warning\" style=\"color:black\">No se encontraron pacientes para ese nombre o documento ingresado.</label>\n                        </div>\n                        <table *ngIf=\"listPatients && listPatients.length > 0\" class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-success\"><a (click)=\"selectPatient(item)\">Seleccionar</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-md-12\"></div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"main-content\">\n    <div class=\"main-content\">\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card\">\n                        <div class=\"card-header\" data-background-color=\"red\">\n                            <h4 class=\"title\">Paciente</h4>\n                            <p class=\"category\">Datos del paciente</p>\n                        </div>\n                        <form (ngSubmit)=\"onSubmit()\" #patientForm=\"ngForm\">\n                            <div class=\"card-content\">\n                                <div class=\"row\">\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Documento</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"document\" required [(ngModel)]=\"model.document\" name=\"document\" readonly>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Nombre</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"firstname\" required [(ngModel)]=\"model.firstName\" name=\"firstname\">\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-4\">\n                                        <div class=\"form-group form-black\">\n                                            <label class=\"control-label\">Apellido</label>\n                                            <input type=\"text\" class=\"form-control\" id=\"lastname\" required [(ngModel)]=\"model.lastName\" name=\"lastname\">\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Fecha nacimiento</label>\n                                            <my-date-picker [options]=\"myDatePickerOptions\" (dateChanged)=\"onDateChanged($event)\" placeholder=\"Ingrese la fecha\" id=\"birthDate\"\n                                                required [(ngModel)]=\"model.birthDate\" name=\"birthDate\"></my-date-picker>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <label class=\"control-label\">Ingresar Sexo.</label>\n                                            <dropdown-generic [listDrop]='sexs' (selectItem)=\"handleSelectSex($event)\"></dropdown-generic>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <a href=\"\" (click)=\"viewStudio = !viewStudio\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                        <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>Agregar estudio\n                                                    </a>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-3\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <a href=\"\" (click)=\"viewControl = !viewControl\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                                                    <i [ngClass]=\"{'fa-plus-square':!viewControl,'fa-minus-circle':viewControl}\" class=\"fa\" aria-hidden=\"true\"></i>Agregar control\n                                                </a>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"viewControl\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-patient-control (controlOut)=\"handleControl($event)\"></app-patient-control>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"model.controls && model.controls.length > 0\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-control-list [ListControls]=\"model.controls\"></app-control-list>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"viewStudio\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-add (studio)=\"handleStudio($event)\"></app-studio-add>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\" *ngIf=\"model.studios && model.studios.length > 0\">\n                                    <div class=\"col-md-12\">\n                                        <div class=\"form-group form-black label-floating\">\n                                            <app-studio-list [Document]=\"model.document\" [ListStudio]=\"model.studios\"></app-studio-list>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Preferencias</label>\n                                            <textarea class=\"form-control danger\" id=\"preference\" [(ngModel)]=\"model.preferens.data\" name=\"preference\"></textarea>\n                                        </div>\n                                    </div>\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <label class=\"control-label\">Rechazos</label>\n                                            <textarea class=\"form-control danger\" id=\"reject\" [(ngModel)]=\"model.rejections.data\" name=\"reject\"></textarea>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"row\">\n                                    <div class=\"col-md-6\">\n                                        <div class=\"form-black label-floating\">\n                                            <button type=\"button\" class=\"btn\">Historial</button>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"clearfix\"></div>\n                                <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!patientForm.form.valid\">Modificar</button>\n                            </div>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/patient/find/patient-find.component.ts":
+/***/ "../../../../../src/app/patient/edit/patient-edit.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientFindComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientEditComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_patient__ = __webpack_require__("../../../../../src/app/models/patient.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_utils_service__ = __webpack_require__("../../../../../src/app/service/utils.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__service_media_service__ = __webpack_require__("../../../../../src/app/service/media.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_dropdown_dropdown__ = __webpack_require__("../../../../../src/app/utils/dropdown/dropdown.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_base_component_view__ = __webpack_require__("../../../../../src/app/models/base-component.view.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_bootstrap_modal__ = __webpack_require__("../../../../ng2-bootstrap-modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_bootstrap_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_ng2_bootstrap_modal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_PopUp_dialogmessage__ = __webpack_require__("../../../../../src/app/utils/PopUp/dialogmessage.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1481,11 +1638,189 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
+var PatientEditComponent = (function (_super) {
+    __extends(PatientEditComponent, _super);
+    function PatientEditComponent(_router, util, _route, _service, _media, dialogService) {
+        var _this = _super.call(this, dialogService) || this;
+        _this._router = _router;
+        _this.util = util;
+        _this._route = _route;
+        _this._service = _service;
+        _this._media = _media;
+        _this.dialogService = dialogService;
+        _this.viewStudio = false;
+        _this.viewControl = false;
+        _this.file = new Array();
+        _this.folderImage = "images";
+        return _this;
+    }
+    PatientEditComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        console.log("PatientEditComponent start");
+        this.model = new __WEBPACK_IMPORTED_MODULE_2__models_patient__["d" /* Patient */]("", "", "", "", "", "", "", "", "", null, null);
+        this.sexs = [
+            { id: 1, value: 'H', view: 'Hombre', select: false },
+            { id: 2, value: 'M', view: 'Mujer', select: false },
+            { id: 3, value: 'I', view: 'Indefinido', select: false }
+        ];
+        if (this.patient) {
+            this.model = this.patient;
+        }
+        else {
+            this.disposable = this.showWait();
+            var document_1 = "";
+            this._route.params.forEach(function (params) {
+                document_1 = params['id'];
+            });
+            this._service.getPatientsforDocument(document_1).subscribe(function (result) {
+                _this.disposable.unsubscribe();
+                console.log("ok " + result);
+                _this.model = _this.util.parsePatient(result)[0];
+                _this.drop.list.find(function (x) { return x.value == _this.model.sex; }).select = true;
+                _this.drop.placeholderDrop = _this.drop.list.find(function (x) { return x.value == _this.model.sex; }).view;
+            }, function (error) {
+                _this.disposable.unsubscribe();
+                console.log("error " + error);
+            });
+        }
+        var s = this.sexs.find(function (x) { return _this.model.sex == x.value; });
+        if (s)
+            s.select = true;
+    };
+    PatientEditComponent.prototype.ngAfterViewInit = function () {
+    };
+    PatientEditComponent.prototype.uploadFile = function () {
+        var _this = this;
+        console.log("uploadFile ");
+        this.file.forEach(function (element) {
+            _this._media.upload(element, _this.model.document);
+        });
+    };
+    PatientEditComponent.prototype.handleStudio = function (event) {
+        if (!this.model.studios)
+            this.model.studios = [];
+        this.model.studios.push({ date: event.date, description: event.description, image: event.image, type: event.type });
+        this.file.push(event.file);
+        this.viewStudio = false;
+    };
+    PatientEditComponent.prototype.handleControl = function (event) {
+        this.model.controls.push({ date: event.date, appetite: event.appetite, imc: event.imc, size: event.size, weight: event.weight, observation: event.observation });
+        this.file.push(event.file);
+        this.viewControl = false;
+    };
+    PatientEditComponent.prototype.handleSelectSex = function (event) {
+        console.log(event);
+        this.model.sex = event;
+    };
+    PatientEditComponent.prototype.onSubmit = function () {
+        console.log("submit");
+        this.disposable = this.showWait();
+        this.updatePatient();
+    };
+    PatientEditComponent.prototype.updatePatient = function () {
+        var _this = this;
+        this._service.getPatientsforDocument(this.model.document).
+            subscribe(function (result) {
+            _this.model.id = _this.util.parsePatient(result)[0].id;
+            _this._service.updatePatients(_this.model).then(function (result) {
+                console.log("Update ok ");
+                _this.disposable.unsubscribe();
+                _this.showMessage('{"title":"Paciente modificado correctamente","css":"alert-success"}', 'Desea volver a la lista de pacientes?');
+            }).catch(function (error) {
+                console.log("Error " + error);
+                _this.disposable.unsubscribe();
+                _this.showMessage('{"title":"No se pudo actulizar el paciente","css":"alert-danger"}', 'Desea volver a la lista de pacientes?');
+            });
+        }, function (error) {
+            console.log("Error " + error);
+            _this.disposable.unsubscribe();
+            _this.showMessage('{"title":"No existe ningun paciente con este documento.","css":"alert-danger"}', 'Desea volver a la lista de pacientes?');
+        });
+    };
+    PatientEditComponent.prototype.showMessage = function (title, body) {
+        var _this = this;
+        return this.dialogService.addDialog(__WEBPACK_IMPORTED_MODULE_9__utils_PopUp_dialogmessage__["a" /* DialogMessageComponent */], {
+            title: title,
+            message: body,
+        }).subscribe(function (isConfirmed) {
+            //We get dialog result
+            if (isConfirmed) {
+                _this._router.navigateByUrl('patient-list');
+            }
+        });
+    };
+    return PatientEditComponent;
+}(__WEBPACK_IMPORTED_MODULE_7__models_base_component_view__["a" /* BaseComponentView */]));
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])("patient"),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__models_patient__["d" /* Patient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_patient__["d" /* Patient */]) === "function" && _a || Object)
+], PatientEditComponent.prototype, "patient", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_6__utils_dropdown_dropdown__["a" /* DropdownComponent */]),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__utils_dropdown_dropdown__["a" /* DropdownComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__utils_dropdown_dropdown__["a" /* DropdownComponent */]) === "function" && _b || Object)
+], PatientEditComponent.prototype, "drop", void 0);
+PatientEditComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-patient-edit',
+        template: __webpack_require__("../../../../../src/app/patient/edit/patient-edit.component.html"),
+        exportAs: 'patientedit'
+    }),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__service_utils_service__["a" /* UtilsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_utils_service__["a" /* UtilsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_patient_service__["a" /* PatientService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__service_media_service__["a" /* MediaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__service_media_service__["a" /* MediaService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_8_ng2_bootstrap_modal__["DialogService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8_ng2_bootstrap_modal__["DialogService"]) === "function" && _h || Object])
+], PatientEditComponent);
+
+var _a, _b, _c, _d, _e, _f, _g, _h;
+//# sourceMappingURL=patient-edit.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/patient/find/patient-find.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Buscar pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <div *ngIf=\"!listPatients || listPatients.length == 0\">\n                            <label class=\"label label-warning\" style=\"color:black\">No se encontraron pacientes para ese nombre o documento ingresado.</label>\n                        </div>\n                        <table *ngIf=\"listPatients && listPatients.length > 0\" class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-success\"><a (click)=\"selectPatient(item)\">Seleccionar</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-md-12\"></div>\n        </div>\n    </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/patient/find/patient-find.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientFindComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_PopUp_message__ = __webpack_require__("../../../../../src/app/utils/PopUp/message.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_bootstrap_modal__ = __webpack_require__("../../../../ng2-bootstrap-modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_bootstrap_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_bootstrap_modal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__service_utils_service__ = __webpack_require__("../../../../../src/app/service/utils.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
 var PatientFindComponent = (function () {
-    function PatientFindComponent(_route, _service) {
+    function PatientFindComponent(_route, _service, dialogService, util) {
         this._route = _route;
         this._service = _service;
-        this.selPatient = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.dialogService = dialogService;
+        this.util = util;
+        this.selPatient = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     PatientFindComponent.prototype.ngOnInit = function () {
         this.search();
@@ -1504,14 +1839,18 @@ var PatientFindComponent = (function () {
                 console.log("error " + error);
                 _this.listPatients = [];
             });
-        else if (this.doc && this.doc != "")
+        else if (this.doc && this.doc != "") {
+            this.showMessage();
             this._service.getPatientsforDocument(this.doc).subscribe(function (result) {
-                console.log(result);
-                _this.listPatients = result;
+                _this.disposable.unsubscribe();
+                console.log("ok " + result);
+                _this.listPatients = _this.util.parsePatient(result);
             }, function (error) {
+                _this.disposable.unsubscribe();
                 console.log("error " + error);
                 _this.listPatients = [];
             });
+        }
         else
             this._service.getPatients().subscribe(function (result) {
                 console.log(result);
@@ -1522,30 +1861,48 @@ var PatientFindComponent = (function () {
                 _this.listPatients = [];
             });
     };
+    PatientFindComponent.prototype.showMessage = function () {
+        this.disposable = this.dialogService.addDialog(__WEBPACK_IMPORTED_MODULE_3__utils_PopUp_message__["a" /* MessageComponent */], {
+            title: 'Aguarde',
+            message: 'Procesando ...'
+        })
+            .subscribe(function (isConfirmed) {
+            //We get dialog result
+            if (isConfirmed) {
+                alert('accepted');
+            }
+            else {
+                alert('declined');
+            }
+        });
+        // setTimeout(()=>{
+        //     this.disposable.unsubscribe();
+        // },5000);
+    };
     return PatientFindComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])("selectPatient"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])("selectPatient"),
     __metadata("design:type", Object)
 ], PatientFindComponent.prototype, "selPatient", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("document"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])("document"),
     __metadata("design:type", String)
 ], PatientFindComponent.prototype, "doc", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("name"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])("name"),
     __metadata("design:type", String)
 ], PatientFindComponent.prototype, "name", void 0);
 PatientFindComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'patient-find',
         template: __webpack_require__("../../../../../src/app/patient/find/patient-find.component.html"),
         exportAs: 'patientfind'
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ng2_bootstrap_modal__["DialogService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ng2_bootstrap_modal__["DialogService"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__service_utils_service__["a" /* UtilsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__service_utils_service__["a" /* UtilsService */]) === "function" && _d || Object])
 ], PatientFindComponent);
 
-var _a, _b;
+var _a, _b, _c, _d;
 //# sourceMappingURL=patient-find.component.js.map
 
 /***/ }),
@@ -1553,7 +1910,7 @@ var _a, _b;
 /***/ "../../../../../src/app/patient/list/patient-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Lista de pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-danger\"><a [routerLink]=\"['/patient-edit', item.document]\">Ver</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card\">\n                    <div class=\"card-header\" data-background-color=\"red\">\n                        <h4 class=\"title\">Lista de pacientes</h4>\n                        <p class=\"category\"></p>\n                    </div>\n                    <div class=\"card-content table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-danger\">\n                                <tr>\n                                    <th>Nombre</th>\n                                    <th>Apellido</th>\n                                    <th>Documento</th>\n                                    <th>Sexo</th>\n                                    <th>Fecha nacimiento</th>\n                                    <th></th>\n                                    <th></th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let item of listPatients\">\n                                    <td>{{item.firstName}}</td>\n                                    <td>{{item.lastName}}</td>\n                                    <td>{{item.document}}</td>\n                                    <td *ngIf=\"item.sex == 'H'\">Masculino</td>\n                                    <td *ngIf=\"item.sex == 'M'\">Femenino</td>\n                                    <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>\n                                    <td class=\"text-danger\"><a [routerLink]=\"['/patient-edit', item.document]\">Ver</a></td>\n                                    <td class=\"text-danger\"><a (click)=\"removePtient(item)\">Borrar</a></td>\n                                </tr>\n                            </tbody>\n                        </table>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1564,6 +1921,9 @@ module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientListComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_patient_service__ = __webpack_require__("../../../../../src/app/service/patient.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_bootstrap_modal__ = __webpack_require__("../../../../ng2-bootstrap-modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_bootstrap_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_bootstrap_modal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_PopUp_dialogmessage__ = __webpack_require__("../../../../../src/app/utils/PopUp/dialogmessage.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1575,29 +1935,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var PatientListComponent = (function () {
-    function PatientListComponent(_service) {
+    function PatientListComponent(dialogService, _service) {
+        this.dialogService = dialogService;
         this._service = _service;
     }
     PatientListComponent.prototype.ngOnInit = function () {
+        this.refreshPatients();
+    };
+    PatientListComponent.prototype.removePtient = function (item) {
+        console.log("remove " + item.$key);
+        this.showMessage('{"title":"Confirmación","css":"alert-danger"}', 'Seguro desea eliminar este paciente?', item);
+    };
+    PatientListComponent.prototype.showMessage = function (title, body, item) {
+        var _this = this;
+        return this.dialogService.addDialog(__WEBPACK_IMPORTED_MODULE_3__utils_PopUp_dialogmessage__["a" /* DialogMessageComponent */], {
+            title: title,
+            message: body,
+        }).subscribe(function (isConfirmed) {
+            //We get dialog result
+            if (isConfirmed) {
+                _this._service.removePatients(item).then(function (result) {
+                    console.log(result);
+                    _this.refreshPatients();
+                });
+            }
+        });
+    };
+    PatientListComponent.prototype.refreshPatients = function () {
         var _this = this;
         this._service.getPatients().subscribe(function (result) {
             console.log(result);
             _this.listPatients = result;
         });
-        console.log("ngOnInit");
     };
     return PatientListComponent;
 }());
 PatientListComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-patient-list',
         template: __webpack_require__("../../../../../src/app/patient/list/patient-list.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_patient_service__["a" /* PatientService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_bootstrap_modal__["DialogService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ng2_bootstrap_modal__["DialogService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__service_patient_service__["a" /* PatientService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_patient_service__["a" /* PatientService */]) === "function" && _b || Object])
 ], PatientListComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=patient-list.component.js.map
 
 /***/ }),
@@ -1684,7 +2068,7 @@ var EntryService = (function () {
     return EntryService;
 }());
 EntryService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [])
 ], EntryService);
 
@@ -1753,11 +2137,11 @@ var MediaService = (function () {
     return MediaService;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
     __metadata("design:type", String)
 ], MediaService.prototype, "folder", void 0);
 MediaService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], MediaService);
 
@@ -1777,6 +2161,8 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__service_utils_service__ = __webpack_require__("../../../../../src/app/service/utils.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1790,6 +2176,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 //const patients: Patient[] = [
 //     { birthDate: "1978, 3, 19", firstName: "Pablo", lastName: "Silva", document: "31130749", sex: "M", intestinalTest: null, personalHistory: null, preferens: null, rejections: null },
 //     { birthDate: "1970, 4, 2", firstName: "Maria Jose", lastName: "Olivera", document: "31130741", sex: "F", intestinalTest: null, personalHistory: null, preferens: null, rejections: null },
@@ -1798,20 +2186,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 //     { birthDate: "1955, 3, 3", firstName: "Lorean", lastName: "Silva", document: "31130759", sex: "F", intestinalTest: null, personalHistory: null, preferens: null, rejections: null },
 // ];
 var PatientService = (function () {
-    function PatientService(db) {
+    function PatientService(db, http, utils) {
         this.db = db;
+        this.http = http;
+        this.utils = utils;
         this.searchSubject = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"]();
-        console.log("EntryService Start");
-        this.patients = this.db.list('patients');
-        this.items = this.patients.valueChanges();
+        console.log("PatientService Start");
+        // this.patients = this.db.list('patients');
+        // this.items = this.patients.valueChanges();
+        // this.http.get('https://kardex-76ed2.firebaseio.com/patients.json?orderBy=%22document%22&equalTo=%2231130749%22').subscribe(data => {
+        //     // Read the result field from the JSON response.
+        //     console.log(data);
+        //   });
+        // var ref = this.db.database.refFromURL("https://kardex-76ed2.firebaseio.com/patients.json?orderBy='document'&equalTo='31130749'");
+        // console.log(ref.toJSON());
+        // ref.orderByChild("document").on("child_added", function(snapshot) {
+        //   console.log("end");
+        // });
     }
     PatientService.prototype.getPatients = function () {
         var _this = this;
         console.log("getPatients start");
+        this.patients = this.db.list('patients');
+        this.items = this.patients.auditTrail();
         return this.items.map(function (res) {
-            console.log(res.length);
-            _this.currentpatients = res;
-            return res;
+            _this.currentpatients = _this.utils.parserListPatient(res);
+            return _this.currentpatients;
         });
     };
     PatientService.prototype.getPatientsforName = function (name) {
@@ -1826,15 +2226,18 @@ var PatientService = (function () {
         });
     };
     PatientService.prototype.getPatientsforDocument = function (document) {
-        var _this = this;
         console.log("getPatientsforDocument start " + document);
-        this.patients = this.db.list('patients', function (ref) { return ref.orderByChild('document').equalTo(document); });
-        this.items = this.patients.valueChanges();
-        return this.items.map(function (res) {
-            console.log(res.length);
-            _this.currentpatients = res;
-            return res;
-        });
+        return this.http.get('https://kardex-76ed2.firebaseio.com/patients.json?orderBy=%22document%22&equalTo=%22' + document + '%22');
+        //this.patients = this.db.database.refFromURL.list('patients', ref => ref.orderByChild('document').equalTo(document));
+        // this.items = this.patients.valueChanges();
+        // return this.items.map
+        // (
+        //     res => {
+        //     console.log("result");
+        //     this.currentpatients = res;
+        //     return res;
+        //     }
+        // );
     };
     PatientService.prototype.getCurrentPatients = function () {
         return this.currentpatients;
@@ -1845,15 +2248,78 @@ var PatientService = (function () {
             return res;
         });
     };
+    PatientService.prototype.updatePatients = function (item) {
+        console.log("updatePatients start");
+        return this.db.object("/patients/" + item.id).update(item);
+    };
+    PatientService.prototype.removePatients = function (item) {
+        console.log("remove start " + item.id);
+        return this.db.object("/patients/" + item.id).remove();
+    };
     return PatientService;
 }());
 PatientService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__service_utils_service__["a" /* UtilsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__service_utils_service__["a" /* UtilsService */]) === "function" && _c || Object])
 ], PatientService);
 
-var _a;
+var _a, _b, _c;
 //# sourceMappingURL=patient.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/service/utils.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UtilsService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UtilsService = (function () {
+    function UtilsService() {
+    }
+    UtilsService.prototype.parsePatient = function (result) {
+        var key;
+        var response = new Array();
+        for (key in result) {
+            if (!result.hasOwnProperty(key))
+                continue;
+            console.log(key);
+            var r = result[key];
+            r.id = key;
+            response.push(r);
+        }
+        return response;
+    };
+    UtilsService.prototype.parserListPatient = function (res) {
+        var response = new Array();
+        var patient;
+        res.forEach(function (action) {
+            console.log(action.type);
+            console.log(action.key);
+            patient = action.payload.val();
+            patient.id = action.key;
+            response.push(patient);
+        });
+        return response;
+    };
+    return UtilsService;
+}());
+UtilsService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [])
+], UtilsService);
+
+//# sourceMappingURL=utils.service.js.map
 
 /***/ }),
 
@@ -1893,7 +2359,7 @@ var StudioListComponent = (function () {
         console.log("StudioListComponent ngOnInit");
     };
     StudioListComponent.prototype.getType = function (type) {
-        return __WEBPACK_IMPORTED_MODULE_1__models_patient__["d" /* StudioType */][type];
+        return __WEBPACK_IMPORTED_MODULE_1__models_patient__["e" /* StudioType */][type];
     };
     StudioListComponent.prototype.getImage = function (name) {
         var _this = this;
@@ -1908,15 +2374,15 @@ var StudioListComponent = (function () {
     return StudioListComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("ListStudio"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])("ListStudio"),
     __metadata("design:type", Object)
 ], StudioListComponent.prototype, "listStudio", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("Document"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])("Document"),
     __metadata("design:type", String)
 ], StudioListComponent.prototype, "document", void 0);
 StudioListComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-studio-list',
         template: __webpack_require__("../../../../../src/app/studio/list/studio-list.component.html")
     }),
@@ -1966,10 +2432,10 @@ var StudioAddComponent = (function () {
         this._service = _service;
         this._media = _media;
         this.folderImage = "images";
-        this.studio = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.studio = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     StudioAddComponent.prototype.ngOnInit = function () {
-        this.studios = [{ id: 0, value: __WEBPACK_IMPORTED_MODULE_2__models_patient__["d" /* StudioType */].Instestinal, view: "Intestinal", select: false }];
+        this.studios = [{ id: 0, value: __WEBPACK_IMPORTED_MODULE_2__models_patient__["e" /* StudioType */].Instestinal, view: "Intestinal", select: false }];
         this.studioOut = new ModelStudio(null, "", "", "", null);
     };
     StudioAddComponent.prototype.onSubmit = function () {
@@ -1996,7 +2462,6 @@ var StudioAddComponent = (function () {
             callback(reader.result);
             _this.urlImg = reader.result;
             _this.studioOut.file = file;
-            console.log(reader.result);
         };
     };
     StudioAddComponent.prototype.onDateChanged = function (event) {
@@ -2009,11 +2474,11 @@ var StudioAddComponent = (function () {
     return StudioAddComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])("studio"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])("studio"),
     __metadata("design:type", Object)
 ], StudioAddComponent.prototype, "studio", void 0);
 StudioAddComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-studio-add',
         template: __webpack_require__("../../../../../src/app/studio/studio-add.component.html"),
     }),
@@ -2085,7 +2550,7 @@ var TableListComponent = (function () {
     return TableListComponent;
 }());
 TableListComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-table-list',
         template: __webpack_require__("../../../../../src/app/table-list/table-list.component.html"),
         styles: [__webpack_require__("../../../../../src/app/table-list/table-list.component.css")]
@@ -2146,7 +2611,7 @@ var TypographyComponent = (function () {
     return TypographyComponent;
 }());
 TypographyComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-typography',
         template: __webpack_require__("../../../../../src/app/typography/typography.component.html"),
         styles: [__webpack_require__("../../../../../src/app/typography/typography.component.css")]
@@ -2207,7 +2672,7 @@ var UpgradeComponent = (function () {
     return UpgradeComponent;
 }());
 UpgradeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-upgrade',
         template: __webpack_require__("../../../../../src/app/upgrade/upgrade.component.html"),
         styles: [__webpack_require__("../../../../../src/app/upgrade/upgrade.component.css")]
@@ -2268,7 +2733,7 @@ var UserProfileComponent = (function () {
     return UserProfileComponent;
 }());
 UserProfileComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-user-profile',
         template: __webpack_require__("../../../../../src/app/user-profile/user-profile.component.html"),
         styles: [__webpack_require__("../../../../../src/app/user-profile/user-profile.component.css")]
@@ -2277,6 +2742,122 @@ UserProfileComponent = __decorate([
 ], UserProfileComponent);
 
 //# sourceMappingURL=user-profile.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/utils/PopUp/dialogmessage.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogMessageComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__ = __webpack_require__("../../../../ng2-bootstrap-modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var DialogMessageComponent = (function (_super) {
+    __extends(DialogMessageComponent, _super);
+    function DialogMessageComponent(dialogService) {
+        return _super.call(this, dialogService) || this;
+    }
+    DialogMessageComponent.prototype.ngOnInit = function () {
+        console.log("DialogService");
+        var t = JSON.parse(this.title);
+        this._title = t.title;
+        this.cssTitle = t.css;
+    };
+    DialogMessageComponent.prototype.confirm = function () {
+        // we set dialog result as true on click on confirm button, 
+        // then we can get dialog result from caller code 
+        this.result = true;
+        this.close();
+    };
+    return DialogMessageComponent;
+}(__WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__["DialogComponent"]));
+DialogMessageComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'dialogMessage',
+        template: "<div class=\"modal-dialog\">\n    <div class=\"modal-content\">\n       <div class=\"modal-header alert\" [ngClass]='cssTitle'>\n         <button type=\"button\" class=\"close\" (click)=\"close()\" >&times;</button>\n         <h4 class=\"modal-title\">{{_title || 'Confirmaci\u00F3n'}}</h4>\n       </div>\n       <div class=\"modal-body\">\n         <p>{{message || 'Esta seguro?'}}</p>\n       </div>\n       <div class=\"modal-footer\">\n         <button type=\"button\" class=\"btn btn-primary\" (click)=\"confirm()\">OK</button>\n         <button type=\"button\" class=\"btn btn-default\" (click)=\"close()\" >Cancelar</button>\n       </div>\n     </div>\n  </div>"
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__["DialogService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__["DialogService"]) === "function" && _a || Object])
+], DialogMessageComponent);
+
+var _a;
+//# sourceMappingURL=dialogmessage.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/utils/PopUp/message.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__ = __webpack_require__("../../../../ng2-bootstrap-modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MessageComponent = (function (_super) {
+    __extends(MessageComponent, _super);
+    function MessageComponent(dialogService) {
+        return _super.call(this, dialogService) || this;
+    }
+    MessageComponent.prototype.confirm = function () {
+        // we set dialog result as true on click on confirm button, 
+        // then we can get dialog result from caller code 
+        this.result = true;
+        this.close();
+    };
+    return MessageComponent;
+}(__WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__["DialogComponent"]));
+MessageComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'confirm',
+        template: "<div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                   <div class=\"modal-header\">\n                   </div>\n                   <div class=\"modal-body\">\n                   <i class=\"fa fa-spinner\" aria-hidden=\"true\"></i>\n                   </div>\n                   <div class=\"modal-footer\">\n                   </div>\n                 </div>\n              </div>"
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__["DialogService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ng2_bootstrap_modal__["DialogService"]) === "function" && _a || Object])
+], MessageComponent);
+
+var _a;
+//# sourceMappingURL=message.js.map
 
 /***/ }),
 
@@ -2324,7 +2905,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var DropdownComponent = (function () {
     function DropdownComponent() {
-        this.selectItem = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.selectItem = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.placeholderDrop = "Seleccione una opción";
     }
     DropdownComponent.prototype.ngOnInit = function () {
@@ -2344,15 +2925,15 @@ var DropdownComponent = (function () {
     return DropdownComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])("listDrop"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])("listDrop"),
     __metadata("design:type", Array)
 ], DropdownComponent.prototype, "list", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])("selectItem"),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])("selectItem"),
     __metadata("design:type", Object)
 ], DropdownComponent.prototype, "selectItem", void 0);
 DropdownComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'dropdown-generic',
         template: __webpack_require__("../../../../../src/app/utils/dropdown/dropdown.html"),
         styles: [__webpack_require__("../../../../../src/app/utils/dropdown/dropdown.css")]
@@ -2405,7 +2986,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map

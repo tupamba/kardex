@@ -17,6 +17,7 @@
                                     <th>Sexo</th>
                                     <th>Fecha nacimiento</th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,6 +29,7 @@
                                     <td *ngIf="item.sex == 'M'">Femenino</td>
                                     <td>{{item.birthDate.formatted | date:'dd-MM-yyyy'}}</td>
                                     <td class="text-danger"><a [routerLink]="['/patient-edit', item.document]">Ver</a></td>
+                                    <td class="text-danger"><a (click)="removePtient(item)">Borrar</a></td>
                                 </tr>
                             </tbody>
                         </table>

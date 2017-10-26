@@ -50,7 +50,6 @@ export class StudioAddComponent implements OnInit {
       callback(reader.result);
       this.urlImg = reader.result;
       this.studioOut.file = file;
-      console.log(reader.result);
     }
   }
   onDateChanged(event) {
